@@ -1,0 +1,27 @@
+.gameIframe{
+    width: 100%;
+    height: 40rem;
+    background-color:#564787;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+    box-shadow: 0px 0px 20px var(--colorDark);
+}
+
+
+.gameIframe .buttonPlayGame{
+    position:absolute;
+    z-index: 100;
+}
+
+
+
+@media only screen and (max-width: 850px){
+    .gameIframe{
+        height: 20rem;
+        width: 100%;
+    }
+}

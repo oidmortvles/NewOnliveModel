@@ -1,0 +1,87 @@
+.buttonLike{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;    
+}
+
+.buttonLike:hover{
+    border: 1px solid var(--colorWhite);
+    color: var(--colorWhite); 
+    cursor: pointer;
+}
+
+
+/* PRIMARY */
+.buttonLikePrimary{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out; 
+}
+
+.buttonLikePrimary:hover{
+    border: 1px solid var(--colorPrimary);
+    color: var(--colorPrimary);
+    box-shadow: 0px 0px 5px var(--colorPrimary);
+}
+/* PRIMARY */
+
+
+
+/* SECONDARY */
+.buttonLikeSecondary{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+}
+
+
+.buttonLikeSecondary:hover{
+    border: 1px solid var(--colorSecondary);
+    color: var(--colorSecondary);
+    box-shadow: 0px 0px 5px var(--colorSecondary);
+}
+/* SECONDARY */
+
+
+
+/* ACTION */
+.buttonLikeAction{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+}
+
+.buttonLikeAction:hover{
+    border: 1px solid var(--colorAction);
+    color: var(--colorAction);
+    box-shadow: 0px 0px 5px var(--colorAction);
+}
+/* ACTION */
+
+
+
+@media only screen and (max-width: 850px){
+    .buttonLike, .buttonLikePrimary, .buttonLikeSecondary, .buttonLikeAction{
+        transform: scale(.8);
+    }
+}

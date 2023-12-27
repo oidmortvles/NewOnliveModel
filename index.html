@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+    
+    <title>New Web App</title>
+  </head>
+  <body>
+      <nav class="navSide">
+
+        <button id="nsButton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+
+        <section class="nsContent nsHiddeSection">
+
+          <ul>
+
+            <li>
+              <img src="https://static.vecteezy.com/system/resources/previews/008/854/063/original/slot-machine-illustration-3d-png.png" alt="">
+              <a href="">Maquinitas</a>
+            </li>
+
+
+            <li>
+              <img src="https://www.casinocarlos.com/wp-content/uploads/2021/06/casino-carlos-casino-online-coin.png" alt="">
+              <a href="">Casino en vivo</a>
+            </li>
+
+
+            <li>
+              <img src="https://ouch-cdn2.icons8.com/DC-E3Y8cnUyL0m_8o7_YC7fjaSGe32FwKoycjTMLEPo/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODc3/L2JlMjM3ZDNlLTEw/YTMtNDgyOS1hYjVm/LWZhNWQxODgxMGJl/MS5wbmc.png" alt="">
+              <a href="">Hot Games</a>
+            </li>
+
+
+            <li>
+              <img src="https://static.vecteezy.com/system/resources/previews/028/241/244/original/casino-3d-rendering-icon-illustration-free-png.png" alt="">
+              <a href="">Nuevos Juegos</a>
+            </li>
+
+
+            <li>
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/027/994/892/small_2x/3d-football-icon-or-3d-realistic-football-icon-or-3d-sports-match-football-png.png" alt="">
+              <a href="">Deportes</a>
+            </li>
+
+
+            <li>
+              <img src="https://static.vecteezy.com/system/resources/previews/020/995/171/original/3d-minimal-social-favorite-icon-bookmark-icon-3d-illustration-free-png.png" alt="">
+              <a href="">Favoritos</a>
+            </li>
+
+          </ul>
+
+          <ul>           
+
+            <li>
+              <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cash-6879993-5640168.png" alt="">
+              <a href="">Retiro</a>
+            </li>
+
+            <li>
+              <img src="https://cdn3d.iconscout.com/3d/premium/thumb/money-bag-3980372-3297249.png" alt="">
+              <a href="">Depósito</a>
+            </li>
+
+          </ul>       
+
+        </section>
+
+
+      </nav>
+      
+
+    <div id="root"></div>
+    <script>
+
+      const buttonNavSide = document.getElementById('nsButton');
+      const navSide = document.querySelector('.navSide');
+      const sectionNavSide = document.querySelector('.nsContent');
+      
+      buttonNavSide.addEventListener('click',()=>{
+        sectionNavSide.classList.toggle('nsHiddeSection');
+        navSide.classList.toggle('navSideWidth');
+      });
+
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

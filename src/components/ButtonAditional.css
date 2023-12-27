@@ -1,0 +1,91 @@
+.buttonAditional{
+    background-color: transparent;
+    padding:.5em 1em;
+    border-radius: .3rem;
+    transition: 0.3s ease-out;
+    border: 1px solid transparent;
+    color:var(--colorBase);
+    font-weight: bolder;
+}
+
+.buttonAditional:hover{
+    color: var(--colorWhite);
+    cursor: pointer;
+}
+
+
+/* PRIMARY */
+.buttonAditionalPrimary{
+    border: 1px solid var(--colorPrimary);
+    color:var(--colorPrimary);
+    transition: 0.3s ease-out;
+}
+
+.buttonAditionalPrimary:hover{
+    background-color: var(--colorPrimary);
+    color: var(--colorWhite);
+    box-shadow: 0px 0px 5px var(--colorPrimary);
+    cursor: pointer;
+}
+/* PRIMARY */
+
+
+
+/* SECONDARY */
+.buttonAditionalSecondary{
+    border: 1px solid var(--colorSecondary);
+    color:var(--colorSecondary);
+    transition: 0.3s ease-out;
+}
+
+.buttonAditionalSecondary:hover{
+    background-color: var(--colorSecondary);
+    color: var(--colorWhite);
+    box-shadow: 0px 0px 5px var(--colorSecondary);
+    cursor: pointer;
+}
+/* SECONDARY */
+
+
+
+
+/* ACTION */
+.buttonAditionalAction{
+    border: 1px solid var(--colorAction);
+    color:var(--colorAction);
+    transition: 0.3s ease-out;
+}
+
+.buttonAditionalAction:hover{
+    background-color: var(--colorAction);
+    color: var(--colorWhite);
+    box-shadow: 0px 0px 5px var(--colorAction);
+    cursor: pointer;
+}
+/* ACTION */
+
+
+
+
+/* WHITE */
+.buttonAditionalWhite{
+    border: 1px solid var(--colorBase);
+    color:var(--colorBase);    
+    transition: 0.3s ease-out;
+}
+
+
+.buttonAditionalWhite:hover{
+    border: 1px solid var(--colorWhite);
+    color: var(--colorWhite);    
+    cursor: pointer;
+}
+/* WHITE */
+
+
+
+@media only screen and (max-width: 850px){
+    .buttonAditional{
+        transform: scale(.8);
+    }
+}

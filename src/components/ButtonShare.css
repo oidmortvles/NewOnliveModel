@@ -1,0 +1,86 @@
+.buttonShare{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;    
+}
+
+.buttonShare:hover{
+    border: 1px solid var(--colorWhite);
+    color: var(--colorWhite);   
+}
+
+
+/* PRIMARY */
+.buttonSharePrimary{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out; 
+}
+
+.buttonSharePrimary:hover{
+    border: 1px solid var(--colorPrimary);
+    color: var(--colorPrimary);
+    box-shadow: 0px 0px 5px var(--colorPrimary);
+}
+/* PRIMARY */
+
+
+
+/* SECONDARY */
+.buttonShareSecondary{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+}
+
+
+.buttonShareSecondary:hover{
+    border: 1px solid var(--colorSecondary);
+    color: var(--colorSecondary);
+    box-shadow: 0px 0px 5px var(--colorSecondary);
+}
+/* SECONDARY */
+
+
+
+/* ACTION */
+.buttonShareAction{
+    background-color: transparent;
+    padding: .5em .5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--colorBase);
+    color: var(--colorBase);
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+}
+
+.buttonShareAction:hover{
+    border: 1px solid var(--colorAction);
+    color: var(--colorAction);
+    box-shadow: 0px 0px 5px var(--colorAction);
+}
+/* ACTION */
+
+
+
+@media only screen and (max-width: 850px){
+    .buttonShare, .buttonSharePrimary, .buttonShareSecondary, .buttonShareAction{
+        transform: scale(.8);
+    }
+}

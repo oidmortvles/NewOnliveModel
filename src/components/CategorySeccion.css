@@ -1,0 +1,9 @@
+.cardSeccion{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: .5em;
+    width: 100%;
+    flex-wrap: wrap;
+}
