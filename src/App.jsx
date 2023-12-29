@@ -1,4 +1,4 @@
-import PrincipalScreen from "./components/PrincipalScreen";
+import PrincipalScreen from "./screens/PrincipalScreen";
 
 export function App(){
 

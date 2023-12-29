@@ -1,3 +1,12 @@
+.navBar{
+    position: absolute;
+    left: 0;
+    z-index: 3000;
+    background: transparent;
+    width: 100%;
+}
+
+
 .nbLongScreen{
     display: flex;
     width: 100%;
@@ -10,8 +19,8 @@
 }
 
 .nbLogo{
-    width: 20rem;
-    height: 2.3rem;
+    width: 10rem;
+    height: 3rem;
     background-color: var(--colorPrimary);
     border-radius: .5rem;
 }
@@ -21,6 +30,7 @@
     align-items: center;
     justify-content: end;
     gap: 1rem;
+    width: 60%;
 }
 
 .nbUserBalance{
@@ -45,8 +55,6 @@
     align-items: center;
 }
 
-
-
 .nbShortScreen{
     display: none;
     align-items: center;
@@ -58,14 +66,18 @@
 }
 
 
-
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 880px){
     .nbLongScreen{
         display: none;
     }
 
     .nbShortScreen{
         display: flex;
+    }
+
+    .nbSectionStatus{
+        width: 100%;
+        justify-content: center;
     }
 
 }

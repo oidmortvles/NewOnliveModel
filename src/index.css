@@ -15,13 +15,13 @@
   -webkit-text-size-adjust: 100%;
 
   --colorPrimary:crimson;
-  --colorSecondary:orange;
+  --colorSecondary:rgba(230,42,0,1);
   --colorAction:#16697A;
   --colorBase:#808080;
   --colorDark:#242424;
   --colorWhite:rgba(255, 255, 255, 0.8);
-  --colorTransparentDark:rgba(2,2,2, .2);
-  --colorTransparentLight:rgba(255, 255, 255, 0.1);
+  --colorTransparentDark:rgba(2,2,2, .3);
+  --colorTransparentLight:rgba(255, 255, 255, .3);
 }
 
 * {
@@ -30,6 +30,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
+  user-select: none;
 }
 
 body {
@@ -59,17 +60,18 @@ body {
 #nsButton{
   background-image: linear-gradient(to left,var(--colorPrimary), var(--colorDark),var(--colorPrimary));
   background-size: 200%;
-  padding: 0.8rem;
+  padding: .5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   border-radius: 50%;
   position: relative;
+  top: 10px;
+  left: 20px;
   z-index: 60000;
   transition: .3s ease-in-out;
 }
-
 
 #nsButton:hover{
   cursor: pointer;
@@ -80,10 +82,12 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  gap: 5rem;
   height: 100%;
-  background-image: linear-gradient(to left,transparent, var(--colorDark),var(--colorDark));
-  border-radius: 0rem 2rem 2rem 0rem; 
-  padding: 1rem 1rem 2rem 1rem;
+  width: 100%;
+  background: rgb(36,36,36);
+  background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(36,36,36,0.8) 50%, rgba(36,36,36,0) 100%);
+  padding: 5rem 0rem 3rem 1rem;
   position: absolute;
   transition: .3s ease-out;
 }
@@ -91,7 +95,6 @@ body {
 .nsHiddeSection{
   transform: translateX(-50rem);
 }
-
 
 .nsContent > ul{
   list-style: none;
@@ -108,6 +111,7 @@ body {
   gap: .5rem;
   border: 1px solid transparent;
   transition: .3s ease-in-out;
+  user-select: none;
 }
 
 .nsContent ul li img{
@@ -120,17 +124,42 @@ body {
   color: var(--colorWhite);
   text-decoration: none;
   transition: .3s ease-out;
-  font-weight: 400;
+  font-weight: 600;
 }
 
-.nsContent ul li a:hover{
-  color: var(--colorPrimary);
+
+.nsContent ul li:hover{
+
+  a{
+    color: var(--colorPrimary);
+  }
+
+  img{
+    filter: drop-shadow(0 0 .9rem var(--colorPrimary));
+  }
+
 }
 
-.nsContent ul li:hover{  
-  /* border-bottom: 1px solid var(--colorPrimary); */
-}
+@media only screen and (max-width: 800px){
 
-.nsContent ul li:hover img{
-  filter: drop-shadow(0 0 .9rem blue);
+  .nsContent{
+    gap: 0rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  #nsButton{
+    left:25px
+  }
+
+  .nsContent > ul{
+    transform: scale(.8);
+    gap: 1rem;
+  }
+
+  .navSideWidth {
+    width: 80%;
+  }
+
+
 }

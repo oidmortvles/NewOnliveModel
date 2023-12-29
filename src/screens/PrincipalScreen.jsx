@@ -1,20 +1,41 @@
 import React from 'react';
-import CategorySeccion from "./CategorySeccion";
-import CategoryCard from "./CategoryCard";
-import ReleaseGamesCard from './ReleaseGamesCard';
-import ReleaseGamesSecction from './ReleaseGamesSecction';
+import CategorySeccion from "../components/CategorySeccion";
+import CategoryCard from "../components/CategoryCard";
+import ReleaseGamesCard from '../components/ReleaseGamesCard';
+import ReleaseGamesSecction from '../components/ReleaseGamesSecction';
 import "./PrincipalScreen.css";
-import GameScreen from './GameScreen';
-import NavBar from './NavBar';
+import GameScreen from '../components/GameScreen';
+import NavBar from '../components/NavBar';
+import Slider from '../components/Slider';
 
 
 function PrincipalScreen() {
+
+  const imagen =[
+
+{img:'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg',
+title: 'Candiba Games',
+description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus dicta. Delectus optio ducimus, nam at aut error expedita eaque sequi vel recusandae ullam deserunt in.'},
+
+
+{img:'https://lumiere-a.akamaihd.net/v1/images/3_avtr-460_2647266a.jpeg',
+title:'Giaconda Games',
+description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus.'},
+
+
+{img:'https://i.blogs.es/2b6c43/1652128756_826_avatar-the-way-of-water-first-trailer-reveals-potential-plot/1366_2000.jpg',
+title:'Giovani Lassio',
+description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus dicta. Delectus optio ducimus, nam at aut error expedita eaque sequi vel recusandae ullam'}
+
+];
+
   return (
 
 <div id='principalScreen'>
 
     <NavBar/>
     
+    <Slider imagenes={imagen}/>
 
     <CategorySeccion>
             <CategoryCard title={"Juegos en Vivo"} informacion={"Más de 300 juegos"} img={'https://betcris.com/wp-content/uploads/2022/04/img-u-roulette-cherries-2.png'}/>

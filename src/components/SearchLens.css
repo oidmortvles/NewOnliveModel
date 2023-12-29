@@ -1,5 +1,5 @@
 .searchLensContainer{
-    
+    width: 100%;
     display: flex;
     position: relative;
     align-items: center;
@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     font-weight: 600;
-    border-radius: .5rem;
+    border-radius: .3rem;
     border: none;
     transition: 0.3s ease-in-out;
     opacity: 1;
@@ -40,13 +40,15 @@
 }
 
 .visibleSearchPlace{
-    width: 15rem;
+    width: 100%;
     background-color: var(--colorTransparentDark);         
     padding: 0.5rem 3rem 0.5rem 0.5rem;
     transition: .3s ease-in-out;
 }
 
 
-@media only screen and (max-width: 800px){
-
+@media only screen and (max-width: 880px){
+    .searchLensContainer{
+        width: 80%;
+    }
 }

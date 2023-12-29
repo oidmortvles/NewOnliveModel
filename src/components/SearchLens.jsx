@@ -4,7 +4,7 @@ import './SearchLens.css';
 function SearchLens() {
 
     const windowWidth = window.innerWidth;
-    const [searchPlace, setSearchPlace] = useState(windowWidth<=800);
+    const [searchPlace, setSearchPlace] = useState(windowWidth<=880);
 
     const ampliarSearchPlace = () =>{
         setSearchPlace(!searchPlace);
