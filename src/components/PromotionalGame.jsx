@@ -5,10 +5,14 @@ import ButtonAditional from './ButtonAditional';
 import ButtonLike from './ButtonLike';
 import ButtonInfo from './ButtonInfo';
 
-function PromotionalGame({img}) {
+function PromotionalGame({games}) {
 
+  let imgFondo='https://cdn3d.iconscout.com/3d/premium/thumb/gambling-9188410-7660620.png?f=webp'
+
+  if(games)imgFondo = games.picture.large;
+  
   let sectionStyle = {
-    backgroundImage: `url(${img})`        
+    backgroundImage: `url(${imgFondo})`
   };
 
   return (
@@ -16,7 +20,8 @@ function PromotionalGame({img}) {
         <div className="pgSectionAnimated">
             <div className="pgSectionA">
                  <ButtonLike colorSet={"White"}/>
-                 <ButtonInfo colorSet={"White"}/>                
+                 <ButtonInfo colorSet={"White"}/> 
+                                
             </div>
 
             <div className="pgSectionB">

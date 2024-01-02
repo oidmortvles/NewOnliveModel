@@ -7,7 +7,7 @@ import "./PrincipalScreen.css";
 import GameScreen from '../components/GameScreen';
 import NavBar from '../components/NavBar';
 import Slider from '../components/Slider';
-
+import CardGameAccessContainer from '../components/CardGameAccessContainer';
 
 function PrincipalScreen() {
 
@@ -43,7 +43,8 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
             <CategoryCard title={"Hot Games"} informacion={"Más de 300 juegos"} img={'https://www.nsa-nv.com/wp-content/uploads/2019/12/casino-points.png'}/>
             <CategoryCard title={"Nuevos Juegos"} informacion={"Más de 300 juegos"} img={'https://alittlecampy.com/wp-content/uploads/2017/12/2000px-Two_red_dice_01.svg_.png'}/>
     </CategorySeccion>
-  
+    
+    <CardGameAccessContainer></CardGameAccessContainer>
 
     <ReleaseGamesSecction>
           <ReleaseGamesCard fondo={'https://i.ytimg.com/vi/VrKv5LnoCE0/maxresdefault.jpg'} titulo={"God of War"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>

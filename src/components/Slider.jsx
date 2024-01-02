@@ -47,7 +47,7 @@ function Slider({imagenes}) {
     <>
     <motion.div className="slider-container">
         <motion.div className='slider'>
-             <motion.img src={imagenes[index].img} alt=""  key={imagenes[index].img}             
+            <motion.img src={imagenes[index].img} alt=""  key={imagenes[index].img}             
                 variants={variants}
                 animate='animate'
                 initial='initial'

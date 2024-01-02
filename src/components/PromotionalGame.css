@@ -1,22 +1,22 @@
 .promotionalGame{
-    width: 15em;
-    height: 13em;
+    width: 13em;
+    height: 15em;
     display: flex;
     align-items: flex-start;
     background-repeat: no-repeat;
-    background-size: 160%;
     background-position: center;   
     background-color: crimson;
     border-radius: .5rem;
     box-shadow: 3px 3px 5px var(--colorDark);
     position: relative;
     z-index: 50;
+    background-size: 250%;
     transition: 0.5s background-size ease-out;
 }
 
 
 .promotionalGame:hover{
-    background-size: 180%; 
+    background-size: 270%; 
 }
 
 
@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -56,8 +56,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    gap: 0.5rem;
+    justify-content: center;
+    flex: 1;
+    gap: 1rem;
 }
 
 .pgSectionB .buttonAditiona{
