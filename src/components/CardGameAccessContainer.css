@@ -1,4 +1,4 @@
-.cardGameAccessContainer{
+/* .cardGameAccessContainer{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,4 +7,23 @@
     padding: 1rem;
     flex-wrap: wrap;
     gap: 1rem;
+} */
+
+
+.cardGameAccessContainer{    
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    grid-template-areas:
+    "corto corto corto corto largo largo largo"  
+}
+  
+  
+.cardGameAccessContainer .principalGameCard{
+    grid-area: corto;
+}
+
+
+.cardGameAccessContainer .releaseGameCard{
+    grid-area: largo;
 }

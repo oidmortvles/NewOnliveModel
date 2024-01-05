@@ -1,6 +1,6 @@
-.featuresGamesCard{
+.releaseGameCard{
     width: calc((100% - 1rem) / 2);
-    height: 13em;
+    height: 17rem;
     padding: 1rem;
     border: 1px solid var(--colorBase);
     border-radius: 0.5em;
@@ -14,14 +14,14 @@
     transition: transform 0.3s ease-out, background-size 0.5s ease-out;
 }
 
-.featuresGamesCard:hover{
+.releaseGameCard:hover{
     border:1px solid var(--colorPrimary);
     box-shadow: 0px 0px 7px var(--colorPrimary);
     background-size: 120%;
 }
 
 
-.fgcContent{
+.rgcContent{
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -38,12 +38,12 @@
 }
 
 
-.fgcContent:hover{
+.rgcContent:hover{
     opacity: 1;
 }
 
 
-.fgcButtonPrincipal{
+.rgcButtonPrincipal{
     width: 20%;
     height: auto;
     padding: .5rem;
@@ -55,7 +55,7 @@
 }
 
 
-.fgcInfoGamesCard{
+.rgcInfoGameCard{
     width: 80%;
     height: auto;
     padding: .5rem;
@@ -67,12 +67,12 @@
 }
 
 
-.fgcInfoGamesCard p{
+.rgcInfoGameCard p{
     opacity: .7;
 }
 
 
-.fgcButtonSection{
+.rgcButtonSection{
         display: flex;
         align-items: self-start;
         justify-content: flex-start;
@@ -83,31 +83,27 @@
 
 @media only screen and (max-width: 850px){
 
-    .featuresGamesCard{
+    .releaseGameCard{
         background-size: cover;
+        width: 100%;
     }
 
-    .featuresGamesCard:hover{
+    .releaseGameCard:hover{
         background-size: cover;
     }
     
-    .fgcButtonPrincipal{
+    .rgcButtonPrincipal{
         padding: 0;
         transform: scale(.8);
     }
 
 
-    .featuresGamesCard{
-        width: 100%;
-    }
-
-
-    .fgcInfoGamesCard{
+    .rgcInfoGamesCard{
         width: 100%;
         height: 100%;
     }
 
-    .fgcButtonSection{
+    .rgcButtonSection{
         width: 100%;
         gap: 0rem;
     }

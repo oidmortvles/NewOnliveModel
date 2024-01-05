@@ -1,11 +1,11 @@
 import React from 'react'
-import './ReleaseGamesCard.css'
+import './ReleaseGameCard.css'
 import ButtonPlayGame from './ButtonPlayGame';
 import ButtonAditional from './ButtonAditional';
 import ButtonLike from './ButtonLike';
 import ButtonInfo from './ButtonInfo';
 
-function ReleaseGamesCard({fondo, titulo, info}) {
+function ReleaseGameCard({fondo, titulo, info}) {
 
     let sectionStyle = {
         backgroundImage: `url(${fondo})`        
@@ -13,19 +13,19 @@ function ReleaseGamesCard({fondo, titulo, info}) {
 
   return (
 
-    <aside className='featuresGamesCard' style={sectionStyle}>
-        <article className='fgcContent'>
+    <aside className='releaseGameCard' style={sectionStyle}>
+        <article className='rgcContent'>
 
-            <div className='fgcButtonPrincipal'>
+            <div className='rgcButtonPrincipal'>
                  <ButtonPlayGame/>
             </div>
 
-            <div className='fgcInfoGamesCard'>
+            <div className='rgcInfoGameCard'>
 
                 <h2>{titulo}</h2>
                 <p>{info}</p>
 
-                <section className='fgcButtonSection'>
+                <section className='rgcButtonSection'>
                     <ButtonAditional data={"DEMO"} colorSet={"Primary"}/>
                     <ButtonLike colorSet={"White"}/>
                     <ButtonInfo colorSet={"White"}/>
@@ -42,4 +42,4 @@ function ReleaseGamesCard({fondo, titulo, info}) {
   )
 }
 
-export default ReleaseGamesCard
+export default ReleaseGameCard

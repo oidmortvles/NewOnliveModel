@@ -1,6 +1,6 @@
-.promotionalGame{
-    width: 10em;
-    height: 15em;
+.principalGameCard{
+    width: 10rem;
+    height: 17rem;
     display: flex;
     align-items: flex-start;
     background-repeat: no-repeat;
@@ -15,12 +15,12 @@
 }
 
 
-.promotionalGame:hover{
+.principalGameCard:hover{
     background-size: 270%; 
 }
 
 
-.pgSectionAnimated{
+.pgcSectionAnimated{
     user-select: none;
     width: 100%;
     height: 100%;
@@ -38,12 +38,12 @@
 }
 
 
-.pgSectionAnimated:hover{
+.pgcSectionAnimated:hover{
     opacity: 1;
 }
 
 
-.pgSectionA{
+.pgcSectionA{
     display: flex;
     width: 100%;
     justify-content: end;
@@ -51,30 +51,30 @@
 }
 
 
-.pgSectionB{
+.pgcSectionB{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
-.pgSectionB .buttonAditiona{
+.pgcSectionB .buttonAditiona{
     margin-top: 1rem;
 }
 
 @media only screen and (max-width: 850px){
-    .promotionalGame{
+    .principalGameCard{
         background-size: cover;
     }
 
-    .promotionalGame:hover {
+    .principalGameCard:hover {
         background-size: cover
     }
 
-    .pgSectionA{
+    .pgcSectionA{
         gap: 0rem;
     }
 }

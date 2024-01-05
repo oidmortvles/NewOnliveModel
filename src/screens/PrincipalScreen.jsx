@@ -1,13 +1,13 @@
 import React from 'react';
 import CategorySeccion from "../components/CategorySeccion";
 import CategoryCard from "../components/CategoryCard";
-import ReleaseGamesCard from '../components/ReleaseGamesCard';
-import ReleaseGamesSecction from '../components/ReleaseGamesSecction';
-import "./PrincipalScreen.css";
-import GameScreen from './GameScreen';
+import ReleaseGameCard from '../components/ReleaseGameCard';
+import ReleaseGameCardSecction from '../components/ReleaseGameCardSecction';
 import NavBar from '../components/NavBar';
 import Carrousel from '../components/Carrousel';
 import CardGameAccessContainer from '../components/CardGameAccessContainer';
+import "./PrincipalScreen.css";
+import GameScreen from './GameScreen';
 
 function PrincipalScreen() {
 
@@ -48,12 +48,12 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
     <CardGameAccessContainer/>
     
 
-    <ReleaseGamesSecction>
-          <ReleaseGamesCard fondo={'https://i.ytimg.com/vi/VrKv5LnoCE0/maxresdefault.jpg'} titulo={"God of War"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
-          <ReleaseGamesCard fondo={'https://beebom.com/wp-content/uploads/2023/06/Overwatch-2-Gameplay.webp?w=640'} titulo={"Beebom"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
-          <ReleaseGamesCard fondo={'https://gameranx.com/wp-content/uploads/2021/08/Splitgate6-1024x576.jpg'} titulo={"Mudra"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
-          <ReleaseGamesCard fondo={'https://www.bazicenter.com/wp-content/uploads/2019/09/Borderlands-3-4-1024x576.jpg'} titulo={"CiberPunk 2077"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
-    </ReleaseGamesSecction>    
+    <ReleaseGameCardSecction>
+          <ReleaseGameCard fondo={'https://i.ytimg.com/vi/VrKv5LnoCE0/maxresdefault.jpg'} titulo={"God of War"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
+          <ReleaseGameCard fondo={'https://beebom.com/wp-content/uploads/2023/06/Overwatch-2-Gameplay.webp?w=640'} titulo={"Beebom"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
+          <ReleaseGameCard fondo={'https://gameranx.com/wp-content/uploads/2021/08/Splitgate6-1024x576.jpg'} titulo={"Mudra"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
+          <ReleaseGameCard fondo={'https://www.bazicenter.com/wp-content/uploads/2019/09/Borderlands-3-4-1024x576.jpg'} titulo={"CiberPunk 2077"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
+    </ReleaseGameCardSecction>    
 
 
     <GameScreen imagen={'https://assets-prd.ignimgs.com/2023/12/18/gta-6-reveal-art-1702900099212.png'}/>        

@@ -3,7 +3,7 @@ import '../screens/GameScreen.css';
 import GameIframe from '../components/GameIframe'
 import ButtonAditional from '../components/ButtonAditional';
 import SectionPromotionalGame from '../components/SectionPromotionalGame';
-import PromotionalGame from '../components/PromotionalGame';
+import PrincipalGameCard from '../components/PrincipalGameCard';
 import ButtonLike from '../components/ButtonLike';
 import ButtonShare from '../components/ButtonShare';
 
@@ -41,22 +41,16 @@ function GameScreen({imagen}) {
         </aside>
 
         <SectionPromotionalGame>
-              <PromotionalGame img={'https://image.jeuxvideo.com/medias-crop-1200-675/168450/1684504558-2139-card.png'}/>
-              <PromotionalGame img={'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/gta-vi-grand-theft-auto-vi-2762629.jpg'}/>
-              <PromotionalGame img={'https://sm.ign.com/ign_latam/feature/g/gta-6-ever/gta-6-everything-we-know-news-leaks-and-pre-trailer-intel_3uxv.jpg'}/>
-              <PromotionalGame img={'https://www.hardware.com.br/wp-content/uploads/2023/12/GTA-6-Grand-Theft-Auto-VI-Rockstar-Games-Wallpaper-Artwork-Jason-Vice-City-2024.png'}/>
-              <PromotionalGame img={'https://image.jeuxvideo.com/medias-crop-1200-675/168450/1684504558-2139-card.png'}/>
-              <PromotionalGame img={'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/gta-vi-grand-theft-auto-vi-2762629.jpg'}/>
-              <PromotionalGame img={'https://sm.ign.com/ign_latam/feature/g/gta-6-ever/gta-6-everything-we-know-news-leaks-and-pre-trailer-intel_3uxv.jpg'}/>
-              <PromotionalGame img={'https://www.hardware.com.br/wp-content/uploads/2023/12/GTA-6-Grand-Theft-Auto-VI-Rockstar-Games-Wallpaper-Artwork-Jason-Vice-City-2024.png'}/>
-              <PromotionalGame img={'https://image.jeuxvideo.com/medias-crop-1200-675/168450/1684504558-2139-card.png'}/>
-              <PromotionalGame img={'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/gta-vi-grand-theft-auto-vi-2762629.jpg'}/>
-              <PromotionalGame img={'https://sm.ign.com/ign_latam/feature/g/gta-6-ever/gta-6-everything-we-know-news-leaks-and-pre-trailer-intel_3uxv.jpg'}/>
-              <PromotionalGame img={'https://www.hardware.com.br/wp-content/uploads/2023/12/GTA-6-Grand-Theft-Auto-VI-Rockstar-Games-Wallpaper-Artwork-Jason-Vice-City-2024.png'}/>
-              <PromotionalGame img={'https://image.jeuxvideo.com/medias-crop-1200-675/168450/1684504558-2139-card.png'}/>
-              <PromotionalGame img={'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/gta-vi-grand-theft-auto-vi-2762629.jpg'}/>
-              <PromotionalGame img={'https://sm.ign.com/ign_latam/feature/g/gta-6-ever/gta-6-everything-we-know-news-leaks-and-pre-trailer-intel_3uxv.jpg'}/>
-              <PromotionalGame img={'https://www.hardware.com.br/wp-content/uploads/2023/12/GTA-6-Grand-Theft-Auto-VI-Rockstar-Games-Wallpaper-Artwork-Jason-Vice-City-2024.png'}/>
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
+              <PrincipalGameCard />
         </SectionPromotionalGame>
 
       </section>
