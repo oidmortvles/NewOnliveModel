@@ -4,14 +4,14 @@ import CategoryCard from "../components/CategoryCard";
 import ReleaseGamesCard from '../components/ReleaseGamesCard';
 import ReleaseGamesSecction from '../components/ReleaseGamesSecction';
 import "./PrincipalScreen.css";
-import GameScreen from '../components/GameScreen';
+import GameScreen from './GameScreen';
 import NavBar from '../components/NavBar';
-import Slider from '../components/Slider';
+import Carrousel from '../components/Carrousel';
 import CardGameAccessContainer from '../components/CardGameAccessContainer';
 
 function PrincipalScreen() {
 
-  const imagen =[
+  const imagenes =[
 
 {img:'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg',
 title: 'Candiba Games',
@@ -35,7 +35,7 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
 
     <NavBar/>
     
-    <Slider imagenes={imagen}/>
+    <Carrousel imagenes={imagenes}/>
 
     <CategorySeccion>
             <CategoryCard title={"Juegos en Vivo"} informacion={"Más de 300 juegos"} img={'https://betcris.com/wp-content/uploads/2022/04/img-u-roulette-cherries-2.png'}/>
@@ -43,8 +43,10 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
             <CategoryCard title={"Hot Games"} informacion={"Más de 300 juegos"} img={'https://www.nsa-nv.com/wp-content/uploads/2019/12/casino-points.png'}/>
             <CategoryCard title={"Nuevos Juegos"} informacion={"Más de 300 juegos"} img={'https://alittlecampy.com/wp-content/uploads/2017/12/2000px-Two_red_dice_01.svg_.png'}/>
     </CategorySeccion>
+
     
-    <CardGameAccessContainer></CardGameAccessContainer>
+    <CardGameAccessContainer/>
+    
 
     <ReleaseGamesSecction>
           <ReleaseGamesCard fondo={'https://i.ytimg.com/vi/VrKv5LnoCE0/maxresdefault.jpg'} titulo={"God of War"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
@@ -54,7 +56,8 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
     </ReleaseGamesSecction>    
 
 
-    <GameScreen imagen={'https://assets-prd.ignimgs.com/2023/12/18/gta-6-reveal-art-1702900099212.png'}/>
+    <GameScreen imagen={'https://assets-prd.ignimgs.com/2023/12/18/gta-6-reveal-art-1702900099212.png'}/>        
+
 
 </div>
     

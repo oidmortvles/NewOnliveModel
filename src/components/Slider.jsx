@@ -1,89 +1,47 @@
-import React, { useState } from 'react';
-import "./Slider.css"
-import { motion } from 'framer-motion';
-import ButtonGradient from './ButtonGradient';
-import ButtonAditional from './ButtonAditional';
+import React from 'react';
+import { motion} from "framer-motion";
+import './Slider.css'
 
-function Slider({imagenes}) {
+const Slider = ({children, itemWidth}) => {
 
-    const [index,setIndex] = useState(0);
+    const windowWidth = window.innerWidth; //ancho de la pantalla total
+    const totalItems = React.Children.count(children); //cantidad de "childrens"
+    const containerWidth = (itemWidth + 12) * totalItems; //ancho del container que recibe los elementos
+    const itemsEnVista = windowWidth / (itemWidth + 24); // cantidad de items que se muestran en la pantalla por default
+    
+    
+    /* console.log('Ancho de ventana',windowWidth );
+    console.log('Cantidad de Children',totalItems );
+    console.log('Ancho del item en Px',itemWidth);
+    console.log('Ancho del container', containerWidth);
+    console.log('items mostrados',itemsEnVista ); */
+    
 
-    const nextSliderImg = ()=>{
-        if(index === imagenes.length -1){
-            setIndex(0);
-            return
-        }
-        setIndex(index + 1)
-    }
+    const limitesBox = {
+        left: -containerWidth + (itemWidth * itemsEnVista),
+        right: 0,
+    };
 
-    const prevSliderImg = ()=>{
-        if(index === 0){
-            setIndex(imagenes.length - 1);
-            return
-        }
-        setIndex(index - 1)
-    }
-
-    //Objeto que guarda las animationes de traspaso entre cada Imagen
-    const variants ={
-        initial:{
-            x:50,
-            opacity:0
-        },
-
-        animate:{
-            x:0,
-            opacity:1
-        },
-        
-        exit:{
-            x:-50,
-            opacity:0
-        }
-    }
-
-
-  return (
-    <>
-    <motion.div className="slider-container">
-        <motion.div className='slider'>
-            <motion.img src={imagenes[index].img} alt=""  key={imagenes[index].img}             
-                variants={variants}
-                animate='animate'
-                initial='initial'
-                exit='exit'
-                drag='x'
-            />
+    
+    return (
+        <section className='sliderContainer'>
             
-             <section className='btnSlider'>
+            <div className='slidePlace'>
+                    <motion.div className='slidePasarela'                 
+                        drag='x' 
+                        dragElastic={.3}
+                        dragMomentum={true}
+                        dragConstraints={limitesBox}
+                    >
+                        <div className='slideGradienteInicio'></div>
+                        <div className='slideItem'>{children}</div>
+                        <div className='slideGradienteFin'></div>
+                        
+                    </motion.div>
+            </div>            
+            
+        </section>
+      )
+};
 
-                <button className='btnPrevAndNext' onClick={prevSliderImg}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
-                     </svg>
-                </button>
-
-
-                <button className='btnPrevAndNext' onClick={nextSliderImg}> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-                    </svg>
-                </button>
-
-             </section>
-
-            <aside className='infoSlider'>
-                <h3>{imagenes[index].title}</h3>
-                <p>{imagenes[index].description}</p>
-                <div>
-                    <ButtonGradient>JUGAR DEMO</ButtonGradient>
-                    <ButtonAditional data={'+INFO'} colorSet={'White'}></ButtonAditional>
-                </div>
-            </aside>
-        </motion.div>
-    </motion.div>
-    </>
-  )
-}
-
-export default Slider
+export default Slider;

@@ -15,7 +15,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
-    padding: 0rem 5rem;
+    padding: 0rem 3rem;
 }
 
 
@@ -42,7 +42,7 @@
     width: 100%;
     align-self: stretch;
     border-radius: 0.5rem;
-    padding: .9rem;
+    padding: .5rem;
     box-shadow: 3px 3px 5px var(--colorDark);
     display: flex;
     align-items: flex-start;

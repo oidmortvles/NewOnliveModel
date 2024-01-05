@@ -1,15 +1,17 @@
 import React from 'react';
+import './SectionPromotionalGame.css';
 import ButtonAditional from './ButtonAditional';
-import './SectionPromotionalGame.css'
+import Slider from './Slider';
 
 function SectionPromotionalGame({children}) {
   return (
     <section className='spgContainer'>
 
       <h3>Otros juegos para ti</h3>
-        <div className='sectionPromotionalGame'>
+
+        <Slider itemWidth={160}>
               {children}
-        </div>
+        </Slider>
        
        <div className='spgButtonMoreGames'>
         <ButtonAditional data={"VER MÁS"} colorSet={"White"}/>

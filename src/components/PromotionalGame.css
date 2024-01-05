@@ -1,5 +1,5 @@
 .promotionalGame{
-    width: 13em;
+    width: 10em;
     height: 15em;
     display: flex;
     align-items: flex-start;
@@ -67,7 +67,6 @@
 
 @media only screen and (max-width: 850px){
     .promotionalGame{
-        width: 10rem;
         background-size: cover;
     }
 
