@@ -7,6 +7,7 @@ import ReleaseGameCard from './ReleaseGameCard';
 export default function CardGameAccessContainer() {
 
   const [games,setGames] = useState([]);
+  const windowWidth = window.innerWidth;
 
 useEffect(()=>{
 
@@ -32,24 +33,35 @@ useEffect(() => {
 
    return (
     <section className='cardGameAccessContainer'>
-      {games.map((game, index) => (
+      {games.map((game, index) => (    
         
-        index % 2 === 0 ?(
+        windowWidth>850 ?
+        ( 
+            /* Si la pantalla es superior a 850px va a renderizar A, sino B  */
+          index % 2 === 0 ?
+          (          
+              /* Si el elemento es NO ES PAR , renderiza "PrincipalGameCard" sino "ReleaseGameCard" */
 
-          <PrincipalGameCard 
-            key={index}
-            games={game}
-            className='corto'/>
+              <PrincipalGameCard 
+                key={index}
+                games={game}
+                className='corto'/>
 
-        ):(  
+          ):(  
 
-          <ReleaseGameCard
-            key={index}
-            fondo={game.picture.large}
-            titulo={game.name.first}
-            info={game.email} 
-            className='largo'/>
-            
+              <ReleaseGameCard
+                key={index}
+                fondo={game.picture.large}
+                titulo={game.name.first}
+                info={game.email} 
+                className='largo'/>
+      
+            )
+        ):(
+            <PrincipalGameCard 
+              key={index}
+              games={game}
+              className='corto'/>
         )
         
       ))}

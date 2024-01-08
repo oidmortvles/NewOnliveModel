@@ -2,7 +2,7 @@
     width: calc((100% - 1rem) / 2);
     height: 17rem;
     padding: 1rem;
-    border: 1px solid var(--colorBase);
+    /* border: 1px solid var(--colorBase); */
     border-radius: 0.5em;
     display: flex;
     align-items: center;
@@ -15,8 +15,8 @@
 }
 
 .releaseGameCard:hover{
-    border:1px solid var(--colorPrimary);
-    box-shadow: 0px 0px 7px var(--colorPrimary);
+    /* border:1px solid var(--colorPrimary);
+    box-shadow: 0px 0px 7px var(--colorPrimary); */
     background-size: 120%;
 }
 
@@ -35,6 +35,7 @@
     z-index: 1000;
     left: 0;
     user-select: none;
+    padding: 1rem
 }
 
 
@@ -56,16 +57,19 @@
 
 
 .rgcInfoGameCard{
-    width: 80%;
+    width: 100%;
     height: auto;
     padding: .5rem;
     display: flex;
     align-items: self-start;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: .5rem;
 }
 
+.rgcInfoGameCard h2{
+    font-weight: 600;
+}
 
 .rgcInfoGameCard p{
     opacity: .7;

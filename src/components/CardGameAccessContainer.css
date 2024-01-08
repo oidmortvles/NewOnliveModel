@@ -1,29 +1,28 @@
-/* .cardGameAccessContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: transparent;
-    padding: 1rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-} */
-
-
 .cardGameAccessContainer{    
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
     gap: 1rem;
-    grid-template-areas:
-    "corto corto corto corto largo largo largo"  
-}
-  
-  
-.cardGameAccessContainer .principalGameCard{
-    grid-area: corto;
+    padding: 0rem 2rem;
+    grid-template-columns: 1fr 2fr 1fr 2fr; 
 }
 
 
 .cardGameAccessContainer .releaseGameCard{
-    grid-area: largo;
+    width: 100%;
 }
+
+.cardGameAccessContainer .releaseGameCard p{
+    font-size: small;
+}
+
+.cardGameAccessContainer .principalGameCard{
+    width: 100%;
+}
+
+@media only screen and (max-width: 850px){
+    .cardGameAccessContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+  
+  
