@@ -1,0 +1,105 @@
+.userPersonalDataCard{    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--colorDarkPlus);
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.updcArticle{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.updcImg img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+    border:5px solid var(--colorPrimary);
+    box-shadow: 0px 0px 10px var(--colorDark);
+    object-fit: fill;
+}
+
+
+.updcSectionData{
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.updcNameData, .updcMoneyData{
+    width: 100%;
+    text-align: left;
+    max-width: 9rem;
+}
+
+.updcNameData p, .updcMoneyData p{
+    color:var(--colorTransparentLight);
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.updcMoneyData span{
+    color: var(--colorPrimary);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+.updcDataShort{
+    width: 100%;
+    border: 1px solid var(--colorTransparentLight);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem .5rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.updcShortItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    color:var(--colorTransparentLight);
+    transition: .3s ease-out;
+}
+
+.updcShortItems svg{
+    color:var(--colorTransparentLight);
+    transition: .3s ease-out;
+}
+
+.updcShortItems:hover svg, .updcShortItems:hover h5{
+    color:var(--colorPrimary)
+}
+
+
+
+@media only screen and (max-width: 850px){
+
+    .updcDataShort {
+        flex-direction: column;
+    }
+
+    .updcArticle{
+        justify-content: center;
+    }
+
+
+    .updcSectionData {
+        gap: 0.5rem;
+    }
+
+}

@@ -6,8 +6,9 @@ import ReleaseGameCardSecction from '../components/ReleaseGameCardSecction';
 import NavBar from '../components/NavBar';
 import Carrousel from '../components/Carrousel';
 import CardGameAccessContainer from '../components/CardGameAccessContainer';
-import "./PrincipalScreen.css";
 import GameScreen from './GameScreen';
+import DashboardUser from '../components/DashboardUser';
+import "./PrincipalScreen.css";
 
 function PrincipalScreen() {
 
@@ -58,7 +59,7 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
 
     <GameScreen imagen={'https://assets-prd.ignimgs.com/2023/12/18/gta-6-reveal-art-1702900099212.png'}/>        
 
-
+    <DashboardUser/>
 </div>
     
 

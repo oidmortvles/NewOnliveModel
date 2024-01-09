@@ -8,6 +8,7 @@ function NavBar() {
     <nav className='navBar'>
 
        <div className="nbLongScreen">
+            {/* NavBar para pantallas > 850px */}
 
             <div className='nbLogo'>
             </div>
@@ -31,6 +32,7 @@ function NavBar() {
        
        
         <div className="nbShortScreen">
+            {/* NavBar para pantallas < 850px */}
             
             <div className='nbLogo'>
             </div>

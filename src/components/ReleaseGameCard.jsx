@@ -22,7 +22,7 @@ function ReleaseGameCard({fondo, titulo, info}) {
 
             <div className='rgcInfoGameCard'>
 
-                <h2>{titulo}</h2>
+                <h3>{titulo}</h3>
                 <p>{info}</p>
 
                 <section className='rgcButtonSection'>
