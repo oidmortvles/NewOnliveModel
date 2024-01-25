@@ -7,7 +7,7 @@ import NavBar from '../components/NavBar';
 import Carrousel from '../components/Carrousel';
 import CardGameAccessContainer from '../components/CardGameAccessContainer';
 import GameScreen from './GameScreen';
-import DashboardUser from '../components/DashboardUser';
+import DashboardUser from './DashboardUser';
 import "./PrincipalScreen.css";
 
 function PrincipalScreen() {

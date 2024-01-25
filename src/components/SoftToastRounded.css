@@ -1,0 +1,75 @@
+.softToastRounded{
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--colorDarkPlus);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.strTextInformation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    border: 2px solid transparent;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    transition: .3s ease-out;
+}
+
+.strTextInformation h4{
+    color: var(--colorTransparentLight);
+    font-weight: 600;
+    font-size: .8rem;
+    text-align: center;
+    transition: .3s ease-out;
+}
+
+.strIcon{
+    color: var(--colorTransparentLight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(2);
+    transition: .3s ease-out;
+}
+
+.strTextInformation:hover{
+    background-color: var(--colorTransparentDark);
+    border:2px solid var(--colorPrimary);
+
+    .strIcon{
+        color:var(--colorWhite);
+    }
+
+    h4{
+        color:var(--colorWhite);
+    }
+}
+
+
+/* CLASE DISPONIBLE PARA CUANDO EL TOAST QUEDE SELECCIONADO */
+.softToastRoundedActive{
+    .strTextInformation{
+        background-color: var(--colorTransparentDark);
+        border:2px solid var(--colorPrimary);
+    }
+
+    .strIcon{
+        color:var(--colorWhite);
+    }
+
+    .strIcon h4{
+        color:var(--colorWhite);
+    }
+}
+
+
+@media only screen and (max-width: 850px){
+    
+}

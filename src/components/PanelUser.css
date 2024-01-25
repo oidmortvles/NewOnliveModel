@@ -1,0 +1,30 @@
+.panelUser{
+    
+}
+
+.panelUserHeader{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.panelUserItemsMenu{
+    width: 25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    background-color: var(--colorDarkPlus);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+
+@media only screen and (max-width: 850px){
+   
+}
