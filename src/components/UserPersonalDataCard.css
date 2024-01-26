@@ -74,7 +74,11 @@
 }
 
 .updcShortItems svg{
-    color:var(--colorTransparentLight);
+    transition: .3s ease-out;
+}
+
+.updcShortItems h5{
+    font-weight: 600;    
     transition: .3s ease-out;
 }
 

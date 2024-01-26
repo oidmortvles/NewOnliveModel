@@ -2,7 +2,7 @@
     padding: 0.8rem;
     border: 1px solid var(--colorBase);
     border-radius: .5rem;
-    width: 19rem;
+    width: 100%;
     height: 13rem;
     transition: 0.3s ease-out;
     display: flex;
@@ -51,7 +51,6 @@
 
 @media only screen and (max-width: 800px){
     .cmBody{
-        width: 8rem;
         height: 10rem;        
     }
 }

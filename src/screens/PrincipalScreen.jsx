@@ -9,6 +9,7 @@ import CardGameAccessContainer from '../components/CardGameAccessContainer';
 import GameScreen from './GameScreen';
 import DashboardUser from './DashboardUser';
 import "./PrincipalScreen.css";
+import Footer from '../components/Footer';
 
 function PrincipalScreen() {
 
@@ -36,8 +37,11 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
 
     <NavBar/>
     
+    
     <Carrousel imagenes={imagenes}/>
 
+    
+    
     <CategorySeccion>
             <CategoryCard title={"Juegos en Vivo"} informacion={"Más de 300 juegos"} img={'https://betcris.com/wp-content/uploads/2022/04/img-u-roulette-cherries-2.png'}/>
             <CategoryCard title={"Maquinitas"} informacion={"Más de 300 juegos"} img={'https://www.casino-sites.in/wp-content/uploads/2021/01/Slot-Image-Banners-21122020.png'}/>
@@ -46,9 +50,11 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
     </CategorySeccion>
 
     
+    
     <CardGameAccessContainer/>
     
 
+    
     <ReleaseGameCardSecction>
           <ReleaseGameCard fondo={'https://i.ytimg.com/vi/VrKv5LnoCE0/maxresdefault.jpg'} titulo={"God of War"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
           <ReleaseGameCard fondo={'https://beebom.com/wp-content/uploads/2023/06/Overwatch-2-Gameplay.webp?w=640'} titulo={"Beebom"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
@@ -57,9 +63,16 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea du
     </ReleaseGameCardSecction>    
 
 
+    
     <GameScreen imagen={'https://assets-prd.ignimgs.com/2023/12/18/gta-6-reveal-art-1702900099212.png'}/>        
 
+    
+    
     <DashboardUser/>
+
+
+    
+    <Footer/>
 </div>
     
 
