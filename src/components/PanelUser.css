@@ -23,6 +23,10 @@
     border-radius: 1rem;
 }
 
+.panelUserItemsMenu a{
+    text-decoration: none;
+}
+
 
 
 @media only screen and (max-width: 850px){

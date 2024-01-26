@@ -18,7 +18,7 @@ function UserPersonalDataCard({username, nameUser}) {
 
                         <div className='updcMoneyData'>
                             <p>Dinero en cuenta</p>
-                            <span>$55.000.000</span>
+                            <span>$255.000.000</span>
                         </div>                     
 
                 </article>

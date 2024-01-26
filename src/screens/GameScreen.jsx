@@ -6,27 +6,30 @@ import SectionPromotionalGame from '../components/SectionPromotionalGame';
 import PrincipalGameCard from '../components/PrincipalGameCard';
 import ButtonLike from '../components/ButtonLike';
 import ButtonShare from '../components/ButtonShare';
+import Footer from '../components/Footer';
+import { useParams } from 'react-router-dom';
 
-function GameScreen({imagen}) {
+function GameScreen() {
 
+  let imagen = "https://assets-prd.ignimgs.com/2023/12/18/gta-6-reveal-art-1702900099212.png";
   let sectionStyle = {
     backgroundImage: `url(${imagen})`        
   };
+  let { id } = useParams();
 
   return (
     <main id='gameScreen' style={sectionStyle} >
 
-      <section className='gsContent'>
-        
+        <h1 className='gsTitlePrincipal'>ID DEL JUEGO: {id}</h1>
+      
+      <section className='gsContent'>        
         <GameIframe/>
-
 
         <div className='gsbuttonAction'>
           <ButtonAditional data={"DEMO"} colorSet={"Primary"}/>
           <ButtonLike colorSet={"White"}/>
           <ButtonShare colorSet={"White"}/>
         </div>
-
 
         <aside className='gsDataGame'>
            < article className='gsArticleDescription'>
@@ -55,7 +58,8 @@ function GameScreen({imagen}) {
 
       </section>
 
-
+      <Footer/>  
+    
     </main>
   )
 }

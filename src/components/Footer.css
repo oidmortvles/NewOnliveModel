@@ -21,6 +21,7 @@ footer header{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 50%;
 }
 
 .footerRedes{
@@ -34,10 +35,11 @@ footer header{
 }
 
 .footerItemRedSocial{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-evenly;
+    flex:1;
 }
 
 
@@ -175,6 +177,7 @@ footer article{
     .footerRedes{
         align-items: flex-start;
         flex-direction: column;
+        width: 100%;
     }
 
     .headerPart1{
