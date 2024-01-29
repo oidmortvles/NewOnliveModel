@@ -1,0 +1,68 @@
+.error404{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.error404 img{
+    width: 40rem;
+    filter: drop-shadow(0 0 2.9rem var(--colorPrimary));
+}
+
+
+.error404Aside{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+}
+
+
+.error404title{
+    position: relative;
+}
+
+.error404title h2{  
+    font-size: 5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.error404title h2:nth-child(2){
+    color:var(--colorPrimary);
+    position: absolute;
+    margin-bottom: 2rem;
+    top:50px;
+    right:0;
+    left: 50px;
+}
+
+
+.error404Aside p{
+    opacity: .7;
+    font-size: smaller;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+@media only screen and (max-width: 850px){
+    
+    .error404{
+        padding: 1rem;
+    }
+
+    .error404 img{
+        width: 15rem;
+    }
+    
+    .error404Aside p {
+        opacity: .7;
+        font-size: smaller;
+        text-align: center;
+    }
+}
