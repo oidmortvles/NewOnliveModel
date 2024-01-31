@@ -1,17 +1,16 @@
 import React from 'react';
-import { Navigate, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { getAutenticado } from '../services/AutenticationService';
 
 
-//Funcion que permita saber si el usuario esta autorizado o no
-let auth;
-auth = true;
 
-function PrivateRoute({componente:Componente, ...props}) {
-  return (
-    <Route {...props}>
-        {auth ? <Componente/>: <Navigate replace to="/45151"/>}        
-    </Route>
-  )
+function PrivateRoute({children}) {
+
+  if (!getAutenticado()){
+    return <Navigate to='/login'/>
+  }
+
+  return children
 }
 
 export default PrivateRoute

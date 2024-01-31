@@ -5,6 +5,8 @@ import GameScreen from "../screens/GameScreen";
 import DashboardUser from "../screens/DashboardUser";
 import Error404 from '../screens/Error404';
 import PrivateRoute from './PrivateRoute';
+import Login from '../screens/Login';
+import Register from '../screens/Register';
 
 function RoutesList() {
   return (
@@ -13,10 +15,12 @@ function RoutesList() {
     <Routes>
         <Route path="/" element={<PrincipalScreen/>}/>
         <Route path="/game/:id" element={<GameScreen/> }/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
 
-        {/* <PrivateRoute path="/usermenu" element={<DashboardUser/>}/> */}
         
-        <Route path='/usermenu' element={<DashboardUser/>}>
+        {/* FORMA DE INVOCAR RUTAS PRIVADAS*/}
+        <Route path='/usermenu' element={<PrivateRoute><DashboardUser/></PrivateRoute>}>
             <Route path="depositar" element={<h3>depositar</h3>}/>
             <Route path="retirar" element={<h3>retirar</h3>}/>
             <Route path="perfil" element={<h3>perfil</h3>}/>

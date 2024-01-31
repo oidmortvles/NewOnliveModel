@@ -14,7 +14,7 @@ function PrincipalScreen() {
 
   const imagenes =[
 
-{img:'https://i.ytimg.com/vi/QdBZY2fkU-0/maxresdefault.jpg',
+{img:'https://www.gaming.net/wp-content/uploads/2023/07/Tchia-Featured.jpg',
 title: 'Candiba Games',
 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus dicta. Delectus optio ducimus, nam at aut error expedita eaque sequi vel recusandae ullam deserunt in.',
 direccion:""},
