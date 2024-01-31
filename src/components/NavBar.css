@@ -47,6 +47,10 @@
     font-weight: 600;
 } 
 
+.nbUserAccess{
+    text-decoration: none;
+}
+
 .nbSectionStatus .nbUserAccess img{
     width: 2.5rem;
     height: 2.5rem;
@@ -78,6 +82,10 @@
     .nbSectionStatus{
         width: 100%;
         justify-content: center;
+    }
+
+    .nbSectionStatus .buttonGradient{
+        display: none;
     }
 
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './NavBar.css'
 import ButtonGradient from './ButtonGradient';
 import SearchLens from './SearchLens';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -20,11 +21,11 @@ function NavBar() {
                     <h3 className='nbUserBalanceMoney'>$00,00</h3>
                 </div>
 
-                <ButtonGradient data={"Depositar"}/>    
+                <ButtonGradient data={"Depositar"} to={"/usermenu/depositar"}/>    
     
-                <div className="nbUserAccess">
+                <Link to={'usermenu'} className="nbUserAccess">
                     <img src="https://miro.medium.com/v2/resize:fit:1200/1*Fb0XBbV8Z8W7UUHuq69CFA.jpeg" alt="User Profile" />
-                </div>
+                </Link>
             </div>
 
 
@@ -45,9 +46,9 @@ function NavBar() {
 
                 <ButtonGradient data={"Depositar"}/>    
     
-                <div className="nbUserAccess">
+                <Link to={'usermenu'} className="nbUserAccess">
                     <img src="https://miro.medium.com/v2/resize:fit:1200/1*Fb0XBbV8Z8W7UUHuq69CFA.jpeg" alt="User Profile" />
-                </div>
+                </Link>
             </div>
 
             <SearchLens/>

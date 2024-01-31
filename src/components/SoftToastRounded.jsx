@@ -1,10 +1,10 @@
 import React from 'react'
 import './SoftToastRounded.css'
-import { Link } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 
 function SoftToastRounded({texto, icon, enlace}) {
   return (
-    <Link to={enlace}>
+    <NavLink to={enlace} className={({ isActive }) => (isActive ? 'softToastRoundedActive' : 'softToastRounded')}>
       <article className='softToastRounded'>
           <div className='strTextInformation'>
               <div className='strIcon'>
@@ -13,7 +13,7 @@ function SoftToastRounded({texto, icon, enlace}) {
               <h4>{texto}</h4>
           </div>
       </article>
-    </Link> 
+    </NavLink> 
   )
 }
 

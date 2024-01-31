@@ -6,6 +6,7 @@
     border: 1px solid transparent;
     color:var(--colorBase);
     font-weight: bolder;
+    text-decoration: none;
 }
 
 .buttonAditional:hover{

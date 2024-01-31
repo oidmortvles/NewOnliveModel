@@ -36,7 +36,7 @@
     color:var(--colorPrimary);
     position: absolute;
     margin-bottom: 2rem;
-    top:50px;
+    top:40px;
     right:0;
     left: 50px;
 }
@@ -50,6 +50,10 @@
 }
 
 
+.error404Aside p span{
+    font-weight: 700;
+}
+
 @media only screen and (max-width: 850px){
     
     .error404{
@@ -59,7 +63,7 @@
     .error404 img{
         width: 15rem;
     }
-    
+
     .error404Aside p {
         opacity: .7;
         font-size: smaller;

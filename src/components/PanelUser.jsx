@@ -23,21 +23,21 @@ function PanelUser() {
 
           {windowWidth<=880?(
           <Slider itemWidth={96}>
-            <SoftToastRounded texto={'Depositar'} icon={<Depositar/>}/>
-            <SoftToastRounded texto={'Retirar'} icon={<Retirar/>}/>
-            <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>}/>
-            <SoftToastRounded texto={'Apuestas'} icon={<Apuestas/>}/>
-            <SoftToastRounded texto={'Legales'} icon={<Legales/>}/>
-            <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>}/>
+            <SoftToastRounded texto={'Depositar'} icon={<Depositar/>} enlace={"depositar"}/>
+            <SoftToastRounded texto={'Retirar'} icon={<Retirar/>} enlace={"retirar"}/>
+            <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>} enlace={"perfil"}/>
+            <SoftToastRounded texto={'Apuestas'} icon={<Apuestas/>} enlace={"apuestas"}/>
+            <SoftToastRounded texto={'Legales'} icon={<Legales/>} enlace={"legales"}/>
+            <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>} enlace={"depositar"}/>
           </Slider>
           ):(
             <aside className='panelUserItemsMenu'>
-                <SoftToastRounded texto={'Depositar'} icon={<Depositar/>}/>
-                <SoftToastRounded texto={'Retirar'} icon={<Retirar/>}/>
-                <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>}/>
-                <SoftToastRounded texto={'Apuestas'} icon={<Apuestas/>}/>
-                <SoftToastRounded texto={'Legales'} icon={<Legales/>}/>
-                <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>}/>
+                <SoftToastRounded texto={'Depositar'} icon={<Depositar/>} enlace={"depositar"}/>
+                <SoftToastRounded texto={'Retirar'} icon={<Retirar/>} enlace={"retirar"}/>
+                <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>} enlace={"perfil"}/>
+                <SoftToastRounded texto={'Apuestas'} icon={<Apuestas/>} enlace={"apuestas"}/>
+                <SoftToastRounded texto={'Legales'} icon={<Legales/>} enlace={"legales"}/>
+                <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>} enlace={"depositar"}/>
             </aside>
           )}
       </header>   

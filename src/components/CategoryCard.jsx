@@ -1,13 +1,14 @@
-import React from 'react'
-import "./CategoryCard.css"
+import React from 'react';
+import "./CategoryCard.css";
+import { Link } from 'react-router-dom';
 
-function CategoryCard({title, informacion, img}) {
+function CategoryCard({title, informacion, img, enlace}) {
 
     let imagen = `"${img}"`;
 
   return (
 
-    <article className='cmBody'>
+    <Link to={enlace} className='cmBody'>
         <header className='cmHeader'>
             <h3>{title}</h3>
             <p>{informacion}</p>
@@ -15,7 +16,7 @@ function CategoryCard({title, informacion, img}) {
 
         <img src={img} alt=""  className='cmImg'/>
 
-    </article>
+    </Link>
 
   )
 }

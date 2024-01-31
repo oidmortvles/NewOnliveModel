@@ -58,18 +58,22 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    padding-top: .5rem;
+    padding: .5rem 0rem;
     border-radius: .5rem;
     text-align: center;
 }
 
 .updcShortItems{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
-    color:var(--colorTransparentLight);
+    gap: 0.1rem;
+    padding: 0.5rem;
+    color: var(--colorTransparentLight);
     font-size: .8rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    text-decoration: none;
     transition: .3s ease-out;
 }
 
@@ -82,17 +86,39 @@
     transition: .3s ease-out;
 }
 
-.updcShortItems:hover svg, .updcShortItems:hover h5{
+.updcShortItems:hover h5{
+    color: var(--colorWhite);
+}
+
+.updcShortItems:hover svg{
     color:var(--colorPrimary)
 }
 
 
+.activeUpcdShortItems{
+    background-color: var(--colorTransparentDark);
+    border-radius: 0.5rem;
+    color: var(--colorWhite);
+    text-decoration: none;
+    border: 2px solid var(--colorPrimary);
+
+    svg{
+        color:var(--colorPrimary)
+    }
+}
+
 
 @media only screen and (max-width: 850px){
+    .userPersonalDataCard{
+        padding: 1rem;
+    }
 
     .userPersonalDataCard{
         width: 100%;
     }
 
+    .updcDataShort{
+        padding: .5rem;
+    }
 
 }

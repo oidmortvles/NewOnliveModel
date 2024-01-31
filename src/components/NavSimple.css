@@ -1,0 +1,14 @@
+.navSimple{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:2rem 3rem;
+}
+
+
+@media only screen and (max-width: 850px){
+    .navSimple{
+        padding: 1rem;
+    }
+}

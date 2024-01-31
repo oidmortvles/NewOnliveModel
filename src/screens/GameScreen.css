@@ -2,7 +2,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: auto;
-    padding-top: 10rem;
 }
 
 
@@ -97,6 +96,7 @@
     .gsContent{
         padding: 0rem 1rem;
         gap: 1rem;
+        padding-bottom: 3rem;
     }
 
     .gsDataGame{

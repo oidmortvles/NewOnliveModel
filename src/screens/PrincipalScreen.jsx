@@ -14,19 +14,22 @@ function PrincipalScreen() {
 
   const imagenes =[
 
-{img:'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg',
+{img:'https://i.ytimg.com/vi/QdBZY2fkU-0/maxresdefault.jpg',
 title: 'Candiba Games',
-description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus dicta. Delectus optio ducimus, nam at aut error expedita eaque sequi vel recusandae ullam deserunt in.'},
+description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus dicta. Delectus optio ducimus, nam at aut error expedita eaque sequi vel recusandae ullam deserunt in.',
+direccion:""},
 
 
-{img:'https://lumiere-a.akamaihd.net/v1/images/3_avtr-460_2647266a.jpeg',
+{img:'https://ailixchaerea.files.wordpress.com/2023/08/img_9851.jpg?w=1024',
 title:'Giaconda Games',
-description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus.'},
+description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus.',
+direccion:""},
 
 
-{img:'https://i.blogs.es/2b6c43/1652128756_826_avatar-the-way-of-water-first-trailer-reveals-potential-plot/1366_2000.jpg',
+{img:'https://images.pushsquare.com/d86750a5ed2e0/spider-man-miles-morales-ps5.large.jpg',
 title:'Giovani Lassio',
-description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus dicta. Delectus optio ducimus, nam at aut error expedita eaque sequi vel recusandae ullam'}
+description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea ducimus debitis vero natus dicta. Delectus optio ducimus, nam at aut error expedita eaque sequi vel recusandae ullam',
+direccion:""}
 
 ];
 

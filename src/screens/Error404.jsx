@@ -21,7 +21,7 @@ function Error404() {
             </p>
         </aside>
 
-        <ButtonAditional data={"Volver al Inicio"} colorSet={"Primary"}/>
+        <ButtonAditional data={"Volver al Inicio"} colorSet={"Primary"} to={"/"}/>
 
    </section>
   );

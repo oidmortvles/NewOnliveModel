@@ -1,13 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ButtonGradient.css';
 
-function ButtonGradient({data , funcionClick, children}) {
-  return (
-    <button className='buttonGradient' onClick={funcionClick}>
+function ButtonGradient({ data, funcionClick, to, children }) {
+
+  if (to) {
+    return (
+      <Link to={to} className='buttonGradient'>
         {data}
         {children}
-    </button>
-  )
+      </Link>
+    );
+
+  } else {    
+    return (
+      <button className='buttonGradient' onClick={funcionClick}>
+        {data}
+        {children}
+      </button>
+    );
+  }
 }
 
-export default ButtonGradient
+export default ButtonGradient;

@@ -8,6 +8,7 @@ import ButtonLike from '../components/ButtonLike';
 import ButtonShare from '../components/ButtonShare';
 import Footer from '../components/Footer';
 import { useParams } from 'react-router-dom';
+import NavSimple from '../components/NavSimple';
 
 function GameScreen() {
 
@@ -19,6 +20,8 @@ function GameScreen() {
 
   return (
     <main id='gameScreen' style={sectionStyle} >
+
+      <NavSimple/>
 
         <h1 className='gsTitlePrincipal'>ID DEL JUEGO: {id}</h1>
       

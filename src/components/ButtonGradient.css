@@ -8,8 +8,10 @@
     border: none;
     transition: 0.3s ease-in-out;
     opacity: 1;
+    color: var(--colorWhite);
     background-image: linear-gradient(to left,rgba(255,126,71,1), rgba(230,42,0,1),rgba(255,126,71,1));
     background-size: 200%;
+    text-decoration: none;
 }
 
 

@@ -3,7 +3,7 @@ Node Version: 18.19.0
 
 En base al Figma propuesto por Buffalo ↴
 (https://www.figma.com/proto/qU8m77wDJVsAhxnVUgqSGi/Design-System?page-id=0%3A1&type%5B%E2%80%A6%5D2C-804%2C0.4=&t=8FkpfuBzkvGdcYXJ-1&scaling=scale-down&node-id=1146-9885&starting-point-node-id=649%3A7643)
-Se construye respetando los lineamientos del diseño y prestando especial atencion al funcionamiento y optimización del producto.
+Se construye esta app respetando los lineamientos del diseño y prestando especial atención al funcionamiento y optimización del producto.
 
 Al estar construido con React sin uso de un Framework como NextJs, se hace un cuidado intensivo donde cada componente esté pensado para su futura reutilización y comunicación entre sí.
 Cada elemento/componente tiene un contenedor pensado para su uso, donde este último es quien se encarga de ejecutar la mayor logica como Componente Padre, por ejemplo: "ReleaseGamesCard" => "ReleaseGamesSecction". 
