@@ -15,12 +15,20 @@
 .updcWelcomeText{
     font-weight: 800;
     font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
 }
 
 
 .updcNameData h6{
     color: var(--colorPrimary);
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
 }
 
 .updcMoneyData{
@@ -86,15 +94,22 @@
     transition: .3s ease-out;
 }
 
-.updcShortItems:hover h5{
-    color: var(--colorWhite);
+
+.updcShortItems:hover{
+    background-color: var(--colorTransparentDark);
+
+    h5{
+        color: var(--colorWhite);
+    }
+
+    svg{
+        color:var(--colorPrimary)
+    }
 }
 
-.updcShortItems:hover svg{
-    color:var(--colorPrimary)
-}
 
 
+/* CLASE DISPONIBLE PARA CUANDO EL TOAST QUEDE SELECCIONADO */
 .activeUpcdShortItems{
     background-color: var(--colorTransparentDark);
     border-radius: 0.5rem;

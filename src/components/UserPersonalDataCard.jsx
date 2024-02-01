@@ -3,10 +3,7 @@ import './UserPersonalDataCard.css';
 import {NavLink } from 'react-router-dom';
 
 function UserPersonalDataCard({username, nameUser}) {
-
-    const truncatedUsername = username.length > 10 ? `${username.slice(0, 10)}...` : username;
-    const windowWidth = window.innerWidth;
-
+    
   return (
     <section className='userPersonalDataCard'>  
                 <article className='updcArticle'>
@@ -14,7 +11,7 @@ function UserPersonalDataCard({username, nameUser}) {
                     <h3 className='updcWelcomeText'>Bienvenido, {nameUser}!</h3>                    
 
                         <div className='updcNameData'>
-                            <h6>@{windowWidth>850? username:truncatedUsername}</h6>
+                            <h6>@{username}</h6>
                         </div>
 
                         <div className='updcMoneyData'>

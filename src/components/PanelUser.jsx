@@ -18,7 +18,7 @@ function PanelUser() {
     <section className='panelUser'>
 
       <header className='panelUserHeader'>
-            <UserPersonalDataCard username={'KingJofre'} nameUser={'Fabian'}/>
+            <UserPersonalDataCard username={'KingJofre'} nameUser={'Fabián'}/>
         
 
           {windowWidth<=880?(
