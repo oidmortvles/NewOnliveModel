@@ -2,7 +2,6 @@
     width: calc((100% - 1rem) / 2);
     height: 17rem;
     padding: 1rem;
-    /* border: 1px solid var(--colorBase); */
     border-radius: 0.5em;
     display: flex;
     align-items: center;
@@ -79,7 +78,6 @@
 
 .rgcButtonSection{
         display: flex;
-        align-items: self-start;
         justify-content: flex-start;
         gap: .5rem;
 }
