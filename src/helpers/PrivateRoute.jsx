@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Navigate } from "react-router-dom";
 import { getAutenticado } from '../services/AutenticationService';
-
-
+import Loader from '../components/Loader';
 
 function PrivateRoute({children}) {
 
@@ -10,7 +9,11 @@ function PrivateRoute({children}) {
     return <Navigate to='/login'/>
   }
 
-  return children
+  return (
+    <Suspense fallback={<Loader/>}>
+      {children}
+    </Suspense>
+  );
 }
 
 export default PrivateRoute

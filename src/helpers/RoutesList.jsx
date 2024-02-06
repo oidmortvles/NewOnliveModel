@@ -1,26 +1,60 @@
-import React from 'react';
+import React, {lazy} from 'react';
 import { Routes, Route } from "react-router-dom";
 import PrincipalScreen from "../screens/PrincipalScreen";
 import GameScreen from "../screens/GameScreen";
-import DashboardUser from "../screens/DashboardUser";
 import Error404 from '../screens/Error404';
 import PrivateRoute from './PrivateRoute';
-import Login from '../screens/Login';
-import Register from '../screens/Register';
+import Loader from '../components/Loader';
+/* import Login from '../screens/Login'; */
+/* import Register from '../screens/Register'; */
+/* import DashboardUser from "../screens/DashboardUser"; */
+
+const DashboardUser = lazy(()=> import("../screens/DashboardUser"));
+const Register = lazy(()=> import('../screens/Register'));
+const Login = lazy(()=> import('../screens/Login'));
+
 
 function RoutesList() {
   return (
 
 
     <Routes>
-        <Route path="/" element={<PrincipalScreen/>}/>
-        <Route path="/game/:id" element={<GameScreen/> }/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
 
+        {/* //1 */}
+        <Route path='/' element={<PrincipalScreen/>}/>
         
-        {/* FORMA DE INVOCAR RUTAS PRIVADAS*/}
-        <Route path='/usermenu' element={<PrivateRoute><DashboardUser/></PrivateRoute>}>
+        
+
+        {/* //2 */}
+        <Route path='/game/:id' element={
+              <React.Suspense fallback={<Loader/>}>
+                  <GameScreen/>
+              </React.Suspense>
+        }/>
+        
+
+
+        {/* //3 */}
+        <Route path='/login' element={
+              <React.Suspense fallback={<Loader/>}>
+                  <Login/>
+              </React.Suspense>
+        }/>
+        
+
+
+        {/* //4 */}
+        <Route path='/register' element={
+            <React.Suspense fallback={<Loader/>}>
+                <Register/>
+            </React.Suspense>
+        }/>
+
+
+
+        {/* //5 */}
+        {/*------RUTA PRIVADA------*/}
+        <Route path='/usermenu' element={<PrivateRoute><DashboardUser/></PrivateRoute>}>        
             <Route path="depositar" element={<h3>depositar</h3>}/>
             <Route path="retirar" element={<h3>retirar</h3>}/>
             <Route path="perfil" element={<h3>perfil</h3>}/>
@@ -29,20 +63,12 @@ function RoutesList() {
             <Route path="favoritos" element={<h3>favoritos</h3>}/>
             <Route path="bonos" element={<h3>bonos</h3>}/>
             <Route path="historial" element={<h3>historial</h3>}/>
-        </Route>
+        </Route> 
+        {/*------RUTA PRIVADA------*/}
 
 
-        {
-        /* 
-        <Route path="/" element={}/>
-        <Route path="/" element={}/>
-        <Route path="/" element={}/>
-        <Route path="/" element={}/>
-        <Route path="/" element={}/>
-        <Route path="/" element={}/> 
-        */
-        }
 
+        {/* //6 */}
         <Route path="*" element={<Error404/>}/>
     </Routes>
 
@@ -51,4 +77,26 @@ function RoutesList() {
   )
 }
 
+
+        {/* 
+        --------MODELOS DE RUTAS----------
+
+
+        <Route path="/" element={}/> 
+
+
+        <Route path='' element={
+              <React.Suspense fallback={<Loader/>}>
+                  
+              </React.Suspense>
+        }/>  
+      
+
+        --------MODELOS DE RUTAS----------
+        */}
+        
+
 export default RoutesList
+
+
+

@@ -6,9 +6,9 @@ import ReleaseGameCardSecction from '../components/ReleaseGameCardSecction';
 import NavBar from '../components/NavBar';
 import Carrousel from '../components/Carrousel';
 import CardGameAccessContainer from '../components/CardGameAccessContainer';
-import DashboardUser from './DashboardUser';
 import "./PrincipalScreen.css";
 import Footer from '../components/Footer';
+
 
 function PrincipalScreen() {
 
@@ -63,7 +63,6 @@ direccion:""}
           <ReleaseGameCard fondo={'https://gameranx.com/wp-content/uploads/2021/08/Splitgate6-1024x576.jpg'} titulo={"Mudra"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
           <ReleaseGameCard fondo={'https://www.bazicenter.com/wp-content/uploads/2019/09/Borderlands-3-4-1024x576.jpg'} titulo={"CiberPunk 2077"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
     </ReleaseGameCardSecction>    
-  
   
     
     <Footer/>
