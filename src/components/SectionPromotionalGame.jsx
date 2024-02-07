@@ -9,7 +9,7 @@ function SectionPromotionalGame({children}) {
 
       <h3>Otros juegos para ti</h3>
 
-        <Slider itemWidth={160}>
+        <Slider itemWidth={162}>
               {children}
         </Slider>
        

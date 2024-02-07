@@ -22,7 +22,7 @@ function PanelUser() {
         
 
           {windowWidth<=880?(
-          <Slider itemWidth={96}>
+          <Slider itemWidth={122}>
             <SoftToastRounded texto={'Depositar'} icon={<Depositar/>} enlace={"depositar"}/>
             <SoftToastRounded texto={'Retirar'} icon={<Retirar/>} enlace={"retirar"}/>
             <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>} enlace={"perfil"}/>

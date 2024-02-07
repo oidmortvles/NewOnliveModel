@@ -84,7 +84,7 @@
     }
 
     .infoCarrousel{
-        background: linear-gradient(to bottom, transparent 0%,rgba(36,36,36,.5) 100%);
+        background: linear-gradient(to bottom, transparent 0%,rgba(36,36,36,.9) 100%);
         align-items: flex-start;
         padding: 0rem 2rem 3rem;
         justify-content: flex-end;

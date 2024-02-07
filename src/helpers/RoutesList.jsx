@@ -26,11 +26,7 @@ function RoutesList() {
         
 
         {/* //2 */}
-        <Route path='/game/:id' element={
-              <React.Suspense fallback={<Loader/>}>
-                  <GameScreen/>
-              </React.Suspense>
-        }/>
+        <Route path='/game/:id' element={<GameScreen/>}/>
         
 
 

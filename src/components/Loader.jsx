@@ -1,14 +1,13 @@
 import React from 'react';
 import "./Loader.css";
+import coinBag from "../assets/coinBag.gif"
 
 function Loader() {
   return (
     <aside className='loaderContent'>
         
-        <h3 className='loaderItem'>
-            LOADER ITEM
-        </h3>
-
+        <img src={coinBag} alt="loading..." />
+        <h3>Cargando</h3>
     </aside>
   )
 }
