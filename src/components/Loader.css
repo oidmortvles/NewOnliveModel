@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 1rem;
     background-color: rgba(2,2,2, .7);
     position: absolute;
     top: 0;
@@ -15,18 +14,33 @@
 
 
 .loaderContent img{
-    filter: drop-shadow(1px 1px 60px var(--colorPrimary));
+    filter: drop-shadow(1px 1px 80px var(--colorPrimary));
+    transform: scale(.7);
 }
 
 @keyframes textSizeAnimation {
-    0%{letter-spacing: -.3rem;}    
-    100%{letter-spacing: .3rem;}
+    0%{
+        opacity: .9;
+    }    
+
+    25%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: .9;
+    }    
+
+    100%{
+        opacity: 0;
+    }
+
 }
 
 .loaderContent h3{
     color: var(--colorPrimary);
     text-transform: uppercase;
     font-weight: 600;
-    filter: drop-shadow(0px 0px 5px var(--colorPrimary));
-    animation: textSizeAnimation 2s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 8px var(--colorPrimary));
+    animation: textSizeAnimation 1s ease-out infinite;
 }

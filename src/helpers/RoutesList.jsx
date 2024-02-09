@@ -5,9 +5,7 @@ import GameScreen from "../screens/GameScreen";
 import Error404 from '../screens/Error404';
 import PrivateRoute from './PrivateRoute';
 import Loader from '../components/Loader';
-/* import Login from '../screens/Login'; */
-/* import Register from '../screens/Register'; */
-/* import DashboardUser from "../screens/DashboardUser"; */
+
 
 const DashboardUser = lazy(()=> import("../screens/DashboardUser"));
 const Register = lazy(()=> import('../screens/Register'));
@@ -49,7 +47,7 @@ function RoutesList() {
 
 
         {/* //5 */}
-        {/*------RUTA PRIVADA------*/}
+        {/*------RUTA PRIVADA Y ANIDADA------*/}
         <Route path='/usermenu' element={<PrivateRoute><DashboardUser/></PrivateRoute>}>        
             <Route path="depositar" element={<h3>depositar</h3>}/>
             <Route path="retirar" element={<h3>retirar</h3>}/>
@@ -60,7 +58,7 @@ function RoutesList() {
             <Route path="bonos" element={<h3>bonos</h3>}/>
             <Route path="historial" element={<h3>historial</h3>}/>
         </Route> 
-        {/*------RUTA PRIVADA------*/}
+        {/*------RUTA PRIVADA Y ANIDADA------*/}
 
 
 

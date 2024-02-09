@@ -1,0 +1,41 @@
+.alertToast{
+    background-color: var(--colorTransparentDark);
+    border: 2px solid var(--colorWhite);
+    border-radius: .5rem;
+    max-width: 20rem;
+    max-height: 7rem;
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+    opacity: .5;
+    transition: opacity .3s;
+}
+
+
+.alertToastMessage{
+    color: var(--colorWhite);
+    padding: .5rem;
+    width: 100%;
+    border-right: 2px solid var(--colorWhite);
+    font-size: 13px;
+    text-wrap: pretty;
+    display: flex;
+    align-items: center;    
+}
+
+
+.alertToastButton{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: .5rem;    
+}
+
+
+.alertToast:active, .alertToast:hover{
+    opacity: 1;
+}
+

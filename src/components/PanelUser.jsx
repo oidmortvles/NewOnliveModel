@@ -21,8 +21,8 @@ function PanelUser() {
             <UserPersonalDataCard username={'KingJofre'} nameUser={'Fabián'}/>
         
 
-          {windowWidth<=880?(
-          <Slider itemWidth={122}>
+          {windowWidth<=850?(
+          <Slider itemWidth={93}>
             <SoftToastRounded texto={'Depositar'} icon={<Depositar/>} enlace={"depositar"}/>
             <SoftToastRounded texto={'Retirar'} icon={<Retirar/>} enlace={"retirar"}/>
             <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>} enlace={"perfil"}/>
