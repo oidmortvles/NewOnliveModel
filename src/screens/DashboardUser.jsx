@@ -16,7 +16,7 @@ function DashboardUser() {
           <main className='dashboardUser'>
           <PanelUser/>
 
-          <section className='dashboardSection'>  
+          <section className='dashboardSection'> 
             <Outlet/>      
           </section>
 

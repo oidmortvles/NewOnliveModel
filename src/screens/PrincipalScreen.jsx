@@ -65,12 +65,18 @@ direccion:""}
           <ReleaseGameCard fondo={'https://www.bazicenter.com/wp-content/uploads/2019/09/Borderlands-3-4-1024x576.jpg'} titulo={"CiberPunk 2077"} info={"loremahshajshd hjahssjnjknksdjf lsdfsdf sklsdfsd ks psldjf ñsl"}/>
     </ReleaseGameCardSecction>    
   
-    <div>
-        <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"success"}/>
-        <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"pending"}/>
-        <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"warning"}/>
-        <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"error"}/>
-    </div>
+
+    {/* Componente para gestionar Notificaciones */}
+    {/*      
+      <div>
+          <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"success"}/>
+          <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"pending"}/>
+          <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"warning"}/>
+          <AlertToast msj={"Algo salió mal, intentalo más tarde!"} state={"error"}/>
+      </div> 
+    */}
+
+
     
     <Footer/>
 </div>

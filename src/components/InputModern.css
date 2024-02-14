@@ -1,0 +1,70 @@
+.inputModernBox{
+    /* padding: .5rem; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .5s ease-out;
+}
+
+.imLabel{
+    color: var(--colorTransparentLight);
+    font-size: .8rem;
+    font-weight: 800;
+    position: absolute;
+    padding: 0rem .3rem;
+    opacity: .5;
+    transition: .5s ease-out;
+}
+
+.imInput{
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--colorDark);
+    height: 3.5rem;
+    min-width: 20rem;
+    width: 100%;
+    user-select: text;
+    letter-spacing: 1px;
+}
+
+
+.imButtonView{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;    
+    position: absolute;
+    right: 1rem;
+    transition: .3s ease-out;
+}
+
+
+.imButtonView:hover{
+    color: var(--colorPrimary);
+}
+
+
+.imButtonViewActive{
+    color: var(--colorPrimary);
+}
+
+
+.imInput:focus{
+    outline: none;
+}
+
+
+.imInput:focus + .imLabel,
+.imInput:not(:placeholder-shown) + .imLabel{
+    opacity: 1;
+    font-weight: 600;
+    transform: translate(0rem, -1rem) scale(.88);
+    color: var(--colorPrimary);
+    padding:0rem;
+}
+
+

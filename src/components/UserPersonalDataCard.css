@@ -64,7 +64,7 @@
     border: 1px solid var(--colorTransparentLight);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row;
     padding: .5rem 0rem;
     border-radius: .5rem;
