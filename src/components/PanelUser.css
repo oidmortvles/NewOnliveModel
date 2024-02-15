@@ -1,5 +1,8 @@
 .panelUser{
-    
+    display: grid;
+    grid-column: 1;
+    align-self: flex-start;
+    height: 100%;
 }
 
 .panelUserHeader{
@@ -8,6 +11,8 @@
     justify-content: center;
     gap: 1rem;
     flex-direction: column;
+    height: 100%;
+    align-self: stretch;
 }
 
 .panelUserItemsMenu{
@@ -21,6 +26,8 @@
     background-color: var(--colorDarkPlus);
     padding: 1rem;
     border-radius: 1rem;
+    height: 100%;
+    align-self: end;
 }
 
 .panelUserItemsMenu a{

@@ -1,0 +1,26 @@
+.cfInfoDiv{
+    width: 100%;
+}
+
+.cfTittle{
+    color: var(--colorPrimary);
+    font-weight: 600; 
+}
+
+.cfParraph{
+    opacity: .7;
+    font-size: .8rem;
+}
+
+.cfParraph span{
+    font-weight: 600;
+}
+
+.mpForm{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 1rem;
+}

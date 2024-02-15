@@ -13,13 +13,13 @@ function DashboardUser() {
   return (
       <>
           <NavSimple/>
-          <main className='dashboardUser'>
-          <PanelUser/>
 
-          <section className='dashboardSection'> 
-            <Outlet/>      
-          </section>
+          <main className='dashboardUser'>            
+              <PanelUser/>
 
+              <section className='dashboardSection'> 
+                <Outlet/>      
+              </section>
           </main>
 
           <Footer/>

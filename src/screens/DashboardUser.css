@@ -1,23 +1,26 @@
 .dashboardUser{
     width: 100%;
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0rem 1rem;
+    margin-bottom: 3rem;
     gap: 1rem;
-    padding: 0rem 1rem 3rem 1rem;
 }
 
 .dashboardSection{
     background-color: var(--colorDarkPlus);
+    padding: 1rem;
     border-radius: 1rem;
     width: 100%;
-    height: 32rem;
+    min-height: 32rem;
+    height: 100%;
 }
 
 
 
 @media only screen and (max-width: 850px){
     .dashboardUser{
-        flex-direction: column;
-        padding: 1rem;
+        grid-template-columns: 1fr;
+        padding: .5rem;
     }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './InputModern.css';
+import './InputText.css';
 
-function InputModern({type, name, id, title}) {
+function InputText({type, name, id, title}) {
 
   const[show,setShow] = useState ('password');
 
@@ -41,4 +41,4 @@ function InputModern({type, name, id, title}) {
   )
 }
 
-export default InputModern
+export default InputText

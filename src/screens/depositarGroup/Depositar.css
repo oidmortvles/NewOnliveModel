@@ -1,0 +1,80 @@
+.depositarContainer{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    gap: 1rem;
+}
+
+.depositarView1, .depositarView2{
+    background-color: var(--colorDark);
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+
+.depositarView2{
+    height: 100%;
+}
+
+
+.depositarTittle{
+    font-weight: 600; 
+    color: var(--colorWhite);
+}
+
+
+.depositarOptionPay{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    flex-wrap: wrap;
+}
+
+
+.depositarOptionPay div{
+    background-color: var(--colorDarkPlus);
+    padding: .5rem;    
+    height: 3rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;     
+}
+
+
+.selectedOptionPay{
+    background-color: var(--colorPrimary) !important;
+}
+
+
+.depositarOptionPay div label{
+    font-weight: 500;    
+    transition: .3s ease-out;
+}
+
+
+.depositarOptionPay div label:hover{
+    color: var(--colorPrimary);
+}
+
+.depositarOptionPay div input{
+    accent-color: var(--colorPrimary);
+    width: .5rem;
+    height: .5rem;
+    visibility: hidden;
+}
+
+
+
+@media only screen and (max-width: 850px){
+    .depositarOptionPay{
+        grid-template-columns: 1fr;
+    }
+}
+

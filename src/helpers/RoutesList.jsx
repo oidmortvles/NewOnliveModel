@@ -7,10 +7,10 @@ import PrivateRoute from './PrivateRoute';
 import Loader from '../components/Loader';
 
 
-const DashboardUser = lazy(()=> import("../screens/DashboardUser"));
 const Register = lazy(()=> import('../screens/Register'));
 const Login = lazy(()=> import('../screens/Login'));
-
+const DashboardUser = lazy(()=> import('../screens/DashboardUser'));
+const Depositar = lazy(()=> import('../screens/depositarGroup/Depositar'));
 
 function RoutesList() {
   return (
@@ -49,7 +49,7 @@ function RoutesList() {
         {/* //5 */}
         {/*------RUTA PRIVADA Y ANIDADA------*/}
         <Route path='/usermenu' element={<PrivateRoute><DashboardUser/></PrivateRoute>}>        
-            <Route path="depositar" element={<h3>depositar</h3>}/>
+            <Route path="depositar" element={<Depositar/>}/>
             <Route path="retirar" element={<h3>retirar</h3>}/>
             <Route path="perfil" element={<h3>perfil</h3>}/>
             <Route path="apuestas" element={<h3>apuestas</h3>}/>
@@ -64,10 +64,10 @@ function RoutesList() {
 
         {/* //6 */}
         <Route path="*" element={<Error404/>}/>
+
+
+
     </Routes>
-
-    
-
   )
 }
 
