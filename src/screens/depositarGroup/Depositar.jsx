@@ -39,7 +39,7 @@ function Depositar() {
         <article className='depositarView2'>
            {render==="mercadoPago"?(<MpForm/>):(null)}
            {render==="tarjeta"?(<CardForm/>):(null)}
-           {render===""?(<LoaderItem msj={"Seleccione su opción de pago"}/>):(null)}           
+           {render===""?(<LoaderItem msj={"Seleccione su forma de pago"}/>):(null)}           
         </article>
 
 

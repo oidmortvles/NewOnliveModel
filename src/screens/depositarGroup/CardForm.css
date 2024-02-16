@@ -16,11 +16,60 @@
     font-weight: 600;
 }
 
-.mpForm{
+
+.cfForm{
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    gap: 1rem;
+}
+
+.cfForm h5{
+    font-weight: 800;
+    color: var(--colorWhite);
+}
+
+
+.cfUserData{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+
+.cfCardData{
+    width: 100%;
+    display: grid;
+    gap: .5rem;
+}
+
+
+.cfCardData section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .3rem;
+}
+
+
+.cfCardData section .imInput:not(:placeholder-shown) + .imLabel{
+    padding-left: 0.5rem;
+}
+
+
+.cfBonus .buttonAditional{
+    margin-top: .5rem;
+    
+}
+
+
+
+@media only screen and (max-width: 850px){
+    .cfCardData section{
+        grid-template-columns: 1fr;
+    }
+    
+    .cfBonus{
+        margin-bottom: 3rem;
+    }
 }

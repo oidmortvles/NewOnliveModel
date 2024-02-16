@@ -1,5 +1,4 @@
 .inputModernBox{
-    /* padding: .5rem; */
     display: flex;
     align-items: center;
     position: relative;
@@ -8,14 +7,13 @@
 
 
 input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-outer-spin-button,
+input[type=number] {
     -webkit-appearance: none;
     margin: 0;
-}
-
-input[type=number] {
     -moz-appearance: textfield;
 }
+
 
 .imLabel{
     color: var(--colorTransparentLight);
@@ -28,12 +26,11 @@ input[type=number] {
 }
 
 .imInput{
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    padding: 0.5rem 2rem 0rem 0.5rem;
     border: none;
     border-radius: 0.5rem;
     background-color: var(--colorDarkPlus);;
-    height: 3.5rem;
-    /* min-width: 20rem; */
+    height: 3rem;
     width: 100%;
     user-select: text;
     letter-spacing: 1px;

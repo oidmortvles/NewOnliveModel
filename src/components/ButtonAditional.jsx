@@ -2,7 +2,10 @@ import React from 'react';
 import "./ButtonAditional.css";
 import { Link } from 'react-router-dom';
 
-function ButtonAditional({ to, fn, iconClas, data, colorSet }) {
+function ButtonAditional({ to, fn, iconClas, data, colorSet, type }) {
+
+  let typeOfButton = type?type:"button";
+
 
   let color;
   switch (colorSet) {
@@ -41,7 +44,7 @@ function ButtonAditional({ to, fn, iconClas, data, colorSet }) {
   }else if(fn){
     //SI RECIBE EL PARAMETRO "FN", FUNCIONA COMO UN "ONCLICK"
   return (
-    <button className={styleSet} onClick={fn}>
+    <button className={styleSet} onClick={fn} type={typeOfButton}>
       {data}
       {iconClas}
     </button>
@@ -49,7 +52,7 @@ function ButtonAditional({ to, fn, iconClas, data, colorSet }) {
   }
 
   return(
-    <button className={styleSet}>
+    <button className={styleSet} type={typeOfButton}>
       {data}
       {iconClas}
     </button>

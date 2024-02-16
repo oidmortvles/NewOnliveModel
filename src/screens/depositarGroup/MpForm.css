@@ -23,18 +23,15 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: column;
     gap: 1rem;
 }
 
-.mpFormBonusSection{
-    
-}
 
 
 .mpFormBonusSection .buttonAditional{    
-
+    margin-top: .5rem;
 }
 
 

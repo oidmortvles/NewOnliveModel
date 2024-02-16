@@ -25,11 +25,11 @@ function MpForm() {
             
             <section className='mpFormBonusSection'>
               <InputText type={"password"} name={"bonusMp"} id={"bonusMp"} title={"Si tenes un Bono ingresalo aquí"} register={register}/>
-              <ButtonAditional data={"Verificar Bonus"} colorSet={"Action"}/>
+              <ButtonAditional data={"Verificar Bonus"} colorSet={"White"}/>
             </section>
             
             <div className='mpFormButtonSection'>
-                <ButtonAditional data={"Pagar desde MP"} colorSet={"Primary"}/>
+                <ButtonAditional data={"Pagar"} colorSet={"Primary"} type={"submit"}/>
             </div>
 
         </form>
