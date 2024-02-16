@@ -14,7 +14,7 @@
     width: 8rem;
     height: 8rem;
     filter: drop-shadow(1px 1px 10px var(--colorPrimary));
-    display: none;
+    z-index: 1;
 }
 
 
@@ -23,11 +23,17 @@
     text-transform: uppercase;
     font-size: small;
     color: var(--colorWhite);
-    background-color: var(--colorPrimary);
-    padding: .5rem;
-    border-radius: 1rem;
-    
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    text-align: center;
+    text-wrap: balance;
     position: absolute;
-    top: 50%;
-    z-index: 1;
+    bottom: 25%;
+}
+
+
+@media only screen and (max-width: 850px){
+    .loaderItem h3{
+        bottom: 30%;
+    }
 }

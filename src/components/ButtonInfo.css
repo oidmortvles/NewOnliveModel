@@ -1,6 +1,6 @@
 .buttonInfo{
     background-color: transparent;
-    padding: .5rem .5rem;
+    padding: .3rem;
     border-radius: 0.3rem;
     border: 1px solid var(--colorBase);
     color: var(--colorBase);
@@ -83,7 +83,7 @@
 
 
 @media only screen and (max-width: 850px){
-    .buttonInfo, .buttonInfoPrimary, .buttonInfoSecondary, .buttonInfoAction{
+    /* .buttonInfo, .buttonInfoPrimary, .buttonInfoSecondary, .buttonInfoAction{
         transform: scale(.8);
-    }
+    } */
 }

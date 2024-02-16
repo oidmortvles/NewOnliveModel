@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './InputText.css';
 
-function InputText({type, name, id, title}) {
+function InputText({ type, name, id, title, register }) {
 
   const[show,setShow] = useState ('password');
+
 
   const mostrarPass=() =>{
     if(show==='password'){
@@ -19,8 +20,18 @@ function InputText({type, name, id, title}) {
     {type==="password"?(
 
       <div className='inputModernBox'>
-          <input type={show} name={name} id={id} className='imInput' placeholder='' />
-          <label htmlFor={id} className='imLabel'>{title}</label>
+          <input 
+                {...register(name)}
+                type={show}
+                name={name}
+                id={id}
+                className='imInput'
+                placeholder='' 
+          />
+
+          <label htmlFor={id} className='imLabel'>
+              {title}
+          </label>
       
           <button onClick={mostrarPass}  className={show==="text"?'imButtonView imButtonViewActive':'imButtonView'} >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -32,8 +43,19 @@ function InputText({type, name, id, title}) {
     ):(
 
       <div className='inputModernBox'>
-        <input type={type} name={name} id={id} className='imInput' placeholder='' />
-        <label htmlFor={id} className='imLabel'>{title}</label>
+          <input
+              {...register(name)}
+              type={type}
+              name={name}
+              id={id}
+              className='imInput'
+              placeholder='' 
+          />
+        
+          <label htmlFor={id} className='imLabel'>
+                {title}
+          </label>
+
       </div>
 
     )}
@@ -41,4 +63,4 @@ function InputText({type, name, id, title}) {
   )
 }
 
-export default InputText
+export default InputText;

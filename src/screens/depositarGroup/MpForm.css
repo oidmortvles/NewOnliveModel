@@ -28,8 +28,12 @@
     gap: 1rem;
 }
 
-.mpFormBonusSection .buttonAditional{
-    width: 100%;
+.mpFormBonusSection{
+    
+}
+
+
+.mpFormBonusSection .buttonAditional{    
 
 }
 
@@ -40,3 +44,8 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
+
+

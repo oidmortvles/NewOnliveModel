@@ -123,9 +123,5 @@
         object-fit: cover;
         border-radius: 0.5rem;
     }
-
-    .gsbuttonAction{
-        gap: 0rem;
-    }
     
 }

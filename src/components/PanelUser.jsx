@@ -28,7 +28,7 @@ function PanelUser() {
             <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>} enlace={"perfil"}/>
             <SoftToastRounded texto={'Apuestas'} icon={<Apuestas/>} enlace={"apuestas"}/>
             <SoftToastRounded texto={'Legales'} icon={<Legales/>} enlace={"legales"}/>
-            <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>} enlace={"depositar"}/>
+            <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>} enlace={"/"}/>
           </Slider>
           ):(
             <aside className='panelUserItemsMenu'>
@@ -37,7 +37,7 @@ function PanelUser() {
                 <SoftToastRounded texto={'Mi perfil'} icon={<Perfil/>} enlace={"perfil"}/>
                 <SoftToastRounded texto={'Apuestas'} icon={<Apuestas/>} enlace={"apuestas"}/>
                 <SoftToastRounded texto={'Legales'} icon={<Legales/>} enlace={"legales"}/>
-                <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>} enlace={"depositar"}/>
+                <SoftToastRounded texto={'Logout'} icon={<CerrarSesion/>} enlace={"/"}/>
             </aside>
           )}
       </header>   

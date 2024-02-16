@@ -37,14 +37,18 @@
 }
 
 
-.depositarOptionPay div{
+.depositarOptionPay button{
     background-color: var(--colorDarkPlus);
     padding: .5rem;    
     height: 3rem;
+    border: none;
     border-radius: .5rem;
+    font-weight: 600;    
     display: flex;
     align-items: center;
-    justify-content: space-between;     
+    justify-content: space-between;   
+    cursor: pointer;  
+    transition: .3s ease-out;
 }
 
 
@@ -53,23 +57,10 @@
 }
 
 
-.depositarOptionPay div label{
-    font-weight: 500;    
-    transition: .3s ease-out;
-}
 
-
-.depositarOptionPay div label:hover{
+.depositarOptionPay button:hover{
     color: var(--colorPrimary);
 }
-
-.depositarOptionPay div input{
-    accent-color: var(--colorPrimary);
-    width: .5rem;
-    height: .5rem;
-    visibility: hidden;
-}
-
 
 
 @media only screen and (max-width: 850px){
