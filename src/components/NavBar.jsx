@@ -23,7 +23,7 @@ function NavBar() {
 
                 <ButtonGradient data={"Depositar"} to={"/usermenu/depositar"}/>    
     
-                <Link to={'usermenu'} className="nbUserAccess">
+                <Link to={'/usermenu/depositar'} className="nbUserAccess">
                     <img src="https://miro.medium.com/v2/resize:fit:1200/1*Fb0XBbV8Z8W7UUHuq69CFA.jpeg" alt="User Profile" />
                 </Link>
             </div>

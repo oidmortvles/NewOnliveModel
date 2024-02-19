@@ -49,17 +49,19 @@
     justify-content: space-between;   
     cursor: pointer;  
     transition: .3s ease-out;
+    color:var(--colorTransparentLight);
 }
 
 
 .selectedOptionPay{
     background-color: var(--colorPrimary) !important;
+    color:var(--colorWhite)!important;
 }
 
 
 
 .depositarOptionPay button:hover{
-    color: var(--colorPrimary);
+    color: var(--colorWhite);
 }
 
 
