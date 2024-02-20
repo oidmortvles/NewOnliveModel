@@ -5,6 +5,7 @@ import { getAutenticado } from '../services/AutenticationService';
 import { useForm } from 'react-hook-form';
 import InputText from '../components/InputText';
 import ButtonAditional from '../components/ButtonAditional';
+import Footer from '../components/Footer';
 
 function Login() {
   
@@ -21,6 +22,8 @@ function Login() {
   }
 
   return (
+
+    <>
     <main className='loginPage'>
 
           <div className='loginLayer'></div>
@@ -36,11 +39,17 @@ function Login() {
 
 
             <div className='itemsForm'>
-                <ButtonAditional data={"Registrarse"}  />
+                {/* <ButtonAditional data={"¿Olvidaste tu contraseña?"}/> */}
+                <ButtonAditional data={"Registrarse"}/>
             </div>  
         </form>  
 
     </main>
+
+
+    <Footer/>
+
+    </>
   )
 }
 

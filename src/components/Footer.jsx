@@ -129,7 +129,7 @@ function Footer() {
             </div>
         </article>
 
-        <p className='footerlastText'>Betsur.bet.ar es un sitio operado por xxx. Bajo permiso otorgado por xxxx. El ámbito de aplicación se circunscribe a la Provincia de Neuquen.</p>
+        <p className='footerlastText'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dicta eum, quos ipsam adipisci velit!</p>
     </footer>
   )
 }
