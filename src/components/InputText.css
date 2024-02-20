@@ -81,3 +81,14 @@ input[type=number] {
 }
 
 
+.errorCampus{
+    width: 100%;
+    font-weight: 600;
+    opacity: .9;
+    font-size: .7rem;
+    padding-left: 0.3rem;
+    position: relative;
+    top: -6px;
+}
+
+

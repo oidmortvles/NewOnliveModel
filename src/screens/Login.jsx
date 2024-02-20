@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import InputText from '../components/InputText';
 import ButtonAditional from '../components/ButtonAditional';
 import Footer from '../components/Footer';
-import useErrorsStore from '../store/errors';
+import useResponseStore from '../store/response';
 
 
 function Login() {
@@ -16,14 +16,29 @@ function Login() {
     return <Navigate to='/'/>
   }
 
-  const { addError } = useErrorsStore();
+  const { addResponse } = useResponseStore();
 
-  const {register, handleSubmit} = useForm();
+  const {register, handleSubmit, formState:{errors}} = useForm();
 
   const loginFormEnviar = (data) =>{
     console.log(data);
-    //addError(data.usernameLogin,"success");
-  } 
+    //addResponse(data.usernameLogin,"success");
+  }
+  
+
+  {/* VALIDADORES POR CAMPO */}
+  const usernameValidator= {
+    required:{value:true, message:"El campo Usuario es requerido"},
+    minLength:{value:2, message:"El campo debe tener al menos 2 caracteres"},
+    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},            
+  };
+
+
+  const passwordValidator= {
+    required:{value:true, message:"El campo Contraseña es requerido"},
+    minLength:{value:2, message:"El campo debe tener al menos 2 caracteres"},
+    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},            
+  }
 
 
   return (
@@ -36,11 +51,11 @@ function Login() {
          <form className='loginForm' onSubmit={handleSubmit(loginFormEnviar)}>
             <h1>INICIAR SESIÓN</h1>
             
-            <div className='itemsForm'>
-              <InputText type={"text"}  name={"usernameLogin"} id={"usernameLogin"} title={"Ingrese su Usuario"}  register={register}/>
-              <InputText type={"password"} name={"passwordLogin"} id={"passwordLogin"} title={"Ingrese su contraseña"} register={register}/>
-              <ButtonAditional data={"Iniciar Sesión"} colorSet={"White"} type={"submit"}/>            
-            </div>
+            <div className='itemsForm'>                
+                <InputText type={"text"}  name={"usernameLogin"} id={"usernameLogin"} title={"Ingrese su Usuario"} register={register} validator={usernameValidator} warnings={errors.usernameLogin}/>
+                <InputText type={"password"} name={"passwordLogin"} id={"passwordLogin"} title={"Ingrese su Contraseña"} register={register} validator={passwordValidator} warnings={errors.passwordLogin}/>                                    
+                <ButtonAditional data={"Iniciar Sesión"} colorSet={"White"} type={"submit"}/>            
+            </div>  
 
 
             <div className='itemsForm'>

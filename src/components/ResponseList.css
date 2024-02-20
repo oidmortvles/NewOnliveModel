@@ -1,0 +1,12 @@
+.responseList{
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    right: 0px;
+    display: flex;
+    padding-right: 0.5rem;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}

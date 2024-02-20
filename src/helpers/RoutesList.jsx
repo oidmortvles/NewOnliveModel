@@ -5,7 +5,7 @@ import GameScreen from "../screens/GameScreen";
 import Error404 from '../screens/Error404';
 import PrivateRoute from './PrivateRoute';
 import Loader from '../components/Loader';
-import ErrorList from '../components/ErrorList';
+import ResponseList from '../components/ResponseList';
 
 const Register = lazy(()=> import('../screens/Register'));
 const Login = lazy(()=> import('../screens/Login'));
@@ -20,7 +20,7 @@ function RoutesList() {
   return (
     <>
     {/* //Componente que muestras los errores */}
-    <ErrorList/>
+    <ResponseList/>
 
     <Routes>        
 
