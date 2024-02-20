@@ -1,11 +1,11 @@
 import React from 'react';
 import './AlertToast.css';
 
-function AlertToast({msj, state}) {
+function AlertToast({msj, status, fn}) {
 
     let colorState= "";
 
-    switch (state){
+    switch (status){
         case "success" : colorState="#00B341";
             break; 
 
@@ -16,22 +16,21 @@ function AlertToast({msj, state}) {
             break;
 
         case "error" : colorState="#B30000";
-            break; 
-                       
+            break;                        
     }
 
 
   return (
-    <div className='alertToast'>
+    <div className='alertToast' style={{borderColor:colorState}}>
 
-        <p className='alertToastMessage'>  
+        <p className='alertToastMessage' style={{borderRightColor:colorState}}>   
            {msj}
         </p>
 
-        <button className='alertToastButton'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
-                <path fill={colorState} d="M8.098 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.7 8.7 0 0 0-1.921-.306 7 7 0 0 0-.798.008h-.013l-.005.001h-.001L8.8 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L4.114 8.254l-.042-.028a.147.147 0 0 1 0-.252l.042-.028zM9.3 10.386q.102 0 .223.006c.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96z"/>
-                <path fill={colorState} d="M5.232 4.293a.5.5 0 0 0-.7-.106L.54 7.127a1.147 1.147 0 0 0 0 1.946l3.994 2.94a.5.5 0 1 0 .593-.805L1.114 8.254l-.042-.028a.147.147 0 0 1 0-.252l.042-.028 4.012-2.954a.5.5 0 0 0 .106-.699"/>
+        <button className='alertToastButton' onClick={fn}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill={colorState} viewBox="0 0 16 16">
+                <path d="M8.021 11.9 3.453 8.62a.72.72 0 0 1 0-1.238L8.021 4.1a.716.716 0 0 1 1.079.619V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                <path d="M5.232 4.293a.5.5 0 0 1-.106.7L1.114 7.945l-.042.028a.147.147 0 0 0 0 .252l.042.028 4.012 2.954a.5.5 0 1 1-.593.805L.539 9.073a1.147 1.147 0 0 1 0-1.946l3.994-2.94a.5.5 0 0 1 .699.106"/>
             </svg>
         </button>
     </div>

@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form';
 import InputText from '../components/InputText';
 import ButtonAditional from '../components/ButtonAditional';
 import Footer from '../components/Footer';
+import useErrorsStore from '../store/errors';
+
 
 function Login() {
   
@@ -14,12 +16,15 @@ function Login() {
     return <Navigate to='/'/>
   }
 
+  const { addError } = useErrorsStore();
 
   const {register, handleSubmit} = useForm();
 
   const loginFormEnviar = (data) =>{
     console.log(data);
-  }
+    //addError(data.usernameLogin,"success");
+  } 
+
 
   return (
 
@@ -46,6 +51,7 @@ function Login() {
 
     </main>
 
+    
 
     <Footer/>
 
