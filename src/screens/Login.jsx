@@ -16,36 +16,35 @@ function Login() {
     return <Navigate to='/'/>
   }
 
-  const { addResponse } = useResponseStore();
-
   const {register, handleSubmit, formState:{errors}, reset} = useForm();
+
+    {/* VALIDADORES POR CAMPO */}
+    const usernameValidator= {
+      required:{value:true, message:"El campo Usuario es requerido"},
+      minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
+      maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"}, 
+      pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},           
+    };  
+  
+    const passwordValidator= {
+      required:{value:true, message:"El campo Contraseña es requerido"},
+      minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
+      maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},
+      pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},             
+    }
+
+
+    const { addResponse } = useResponseStore();  
+
 
   const loginFormEnviar = (data) =>{
     console.log(data);
     addResponse(`Datos validados, Bienvenido ${data.usernameLogin}!`,"success");
     reset();
   }
-  
-
-  {/* VALIDADORES POR CAMPO */}
-  const usernameValidator= {
-    required:{value:true, message:"El campo Usuario es requerido"},
-    minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
-    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"}, 
-    pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},           
-  };
-
-
-  const passwordValidator= {
-    required:{value:true, message:"El campo Contraseña es requerido"},
-    minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
-    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},
-    pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},             
-  }
 
 
   return (
-
     <>
     <main className='loginPage'>
 
@@ -62,11 +61,10 @@ function Login() {
 
             <div className='loginFormoptionsExtra'>
                 <ButtonAditional data={"¿Olvidaste tu contraseña?"}/>
-                <ButtonAditional data={"Registrarse"} colorSet={"White"}/> 
+                <ButtonAditional data={"Registrarse"} colorSet={"White"} to={"/register"}/> 
             </div>  
             
-        </form>  
-
+        </form> 
     </main>
 
     

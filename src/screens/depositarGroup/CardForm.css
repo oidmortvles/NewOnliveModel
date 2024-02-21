@@ -58,10 +58,18 @@
 
 
 .cfBonus .buttonAditional{
-    margin-top: .5rem;
-    
+    padding:0;    
 }
 
+
+.cfAsideInputs{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
 
 
 @media only screen and (max-width: 850px){
@@ -71,5 +79,11 @@
     
     .cfBonus{
         margin-bottom: 3rem;
+    }
+
+
+    .cfAsideInputs{
+        grid-template-columns: 1fr;
+        margin-bottom: 0rem;
     }
 }

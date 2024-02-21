@@ -2,6 +2,7 @@
     position: fixed;
     z-index: 100;
     right: 0px;
+    bottom: 49px;
     display: flex;
     padding: 0.5rem;
     gap: 0.5rem;

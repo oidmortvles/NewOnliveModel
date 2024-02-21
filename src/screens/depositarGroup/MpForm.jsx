@@ -3,13 +3,32 @@ import './MpForm.css';
 import InputText from '../../components/InputText';
 import ButtonAditional from '../../components/ButtonAditional';
 import { useForm } from 'react-hook-form';
+import useResponseStore from '../../store/response';
 
 function MpForm() {
 
-  const {register, handleSubmit} = useForm();
+  const {register, handleSubmit, formState:{errors}, reset} = useForm();
+
+  {/* VALIDADORES POR CAMPO */}
+  const dineroMp = {
+    required: {value:true, message:"El campo Monto es requerido"},
+    pattern:{value:/^[0-9]+$/, message:"Ingrese un Monto sin puntos ni comas"},
+  };
+
+
+  const bonusMp = {
+    pattern:{value: /^[A-Z]+$/, message:"Ingrese su código en mayúsculas" },
+  };
+
+
+
+
+  const { addResponse } = useResponseStore();
 
   const mpFormEnviar = (data) =>{
     console.log(data);
+    addResponse(`Carga Realizada por $ ${data.dineroMp}!`,"success");
+    reset();
   }
 
   return (
@@ -21,11 +40,11 @@ function MpForm() {
 
         <form className='mpForm' onSubmit={handleSubmit(mpFormEnviar)}>
 
-            <InputText type={"number"} name={"dineroMp"} id={"montoMp"} title={"Ingresa el monto a depositar"} register={register}/>
+            <InputText type={"text"} name={"dineroMp"} id={"montoMp"} title={"Ingresa el Monto a depositar"} register={register} validator={dineroMp} warnings={errors.dineroMp}/>
             
             <section className='mpFormBonusSection'>
-              <InputText type={"password"} name={"bonusMp"} id={"bonusMp"} title={"Si tenés un Bono ingresalo aquí"} register={register}/>
-              <ButtonAditional data={"Verificar Bonus"} colorSet={"White"}/>
+              <InputText type={"password"} name={"bonusMp"} id={"bonusMp"} title={"Si tenés un Bono ingresalo aquí"} register={register} validator={bonusMp} warnings={errors.bonusMp}/>
+              <ButtonAditional data={"Verificar Bonus"}/>
             </section>
             
             <div className='mpFormButtonSection'>
