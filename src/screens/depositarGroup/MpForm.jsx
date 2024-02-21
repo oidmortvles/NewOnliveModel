@@ -21,10 +21,10 @@ function MpForm() {
 
         <form className='mpForm' onSubmit={handleSubmit(mpFormEnviar)}>
 
-            <InputText type={"number"} name={"dineroMp"} id={"montoMp"} title={"Ingresa el monto sin puntos"} register={register}/>
+            <InputText type={"number"} name={"dineroMp"} id={"montoMp"} title={"Ingresa el monto a depositar"} register={register}/>
             
             <section className='mpFormBonusSection'>
-              <InputText type={"password"} name={"bonusMp"} id={"bonusMp"} title={"Si tenes un Bono ingresalo aquí"} register={register}/>
+              <InputText type={"password"} name={"bonusMp"} id={"bonusMp"} title={"Si tenés un Bono ingresalo aquí"} register={register}/>
               <ButtonAditional data={"Verificar Bonus"} colorSet={"White"}/>
             </section>
             

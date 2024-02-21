@@ -54,10 +54,23 @@
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+    flex: 1;
 }
 
 
 .itemsForm .buttonAditional{
+    width: 10rem;
+    align-self: center;
+}
+
+
+.loginFormoptionsExtra{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.loginFormoptionsExtra .buttonAditionalWhite{
     width: 10rem;
     align-self: center;
 }

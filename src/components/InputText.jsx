@@ -26,7 +26,8 @@ function InputText({ type, name, id, title, register, validator, warnings}) {
                   name={name}
                   id={id}
                   className='imInput'
-                  placeholder='' 
+                  placeholder=''
+                  autoComplete="off" 
             />
 
             <label htmlFor={id} className='imLabel'>
@@ -52,7 +53,8 @@ function InputText({ type, name, id, title, register, validator, warnings}) {
                 name={name}
                 id={id}
                 className='imInput'
-                placeholder='' 
+                placeholder=''
+                autoComplete="off" 
             />
           
             <label htmlFor={id} className='imLabel'>

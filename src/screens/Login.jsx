@@ -18,26 +18,29 @@ function Login() {
 
   const { addResponse } = useResponseStore();
 
-  const {register, handleSubmit, formState:{errors}} = useForm();
+  const {register, handleSubmit, formState:{errors}, reset} = useForm();
 
   const loginFormEnviar = (data) =>{
     console.log(data);
-    //addResponse(data.usernameLogin,"success");
+    addResponse(`Datos validados, Bienvenido ${data.usernameLogin}!`,"success");
+    reset();
   }
   
 
   {/* VALIDADORES POR CAMPO */}
   const usernameValidator= {
     required:{value:true, message:"El campo Usuario es requerido"},
-    minLength:{value:2, message:"El campo debe tener al menos 2 caracteres"},
-    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},            
+    minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
+    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"}, 
+    pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},           
   };
 
 
   const passwordValidator= {
     required:{value:true, message:"El campo Contraseña es requerido"},
-    minLength:{value:2, message:"El campo debe tener al menos 2 caracteres"},
-    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},            
+    minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
+    maxLength:{value:15, message:"El campo debe tener menos de 15 caracteres"},
+    pattern:{value:/^[a-zA-Z0-9.\-_]+$/, message:"Revise los caracteres ingresados"},             
   }
 
 
@@ -49,19 +52,19 @@ function Login() {
           <div className='loginLayer'></div>
 
          <form className='loginForm' onSubmit={handleSubmit(loginFormEnviar)}>
-            <h1>INICIAR SESIÓN</h1>
-            
-            <div className='itemsForm'>                
+
+            <div className='itemsForm'>   
+                <h1>INICIAR SESIÓN</h1>             
                 <InputText type={"text"}  name={"usernameLogin"} id={"usernameLogin"} title={"Ingrese su Usuario"} register={register} validator={usernameValidator} warnings={errors.usernameLogin}/>
                 <InputText type={"password"} name={"passwordLogin"} id={"passwordLogin"} title={"Ingrese su Contraseña"} register={register} validator={passwordValidator} warnings={errors.passwordLogin}/>                                    
-                <ButtonAditional data={"Iniciar Sesión"} colorSet={"White"} type={"submit"}/>            
-            </div>  
+                <ButtonAditional data={"Iniciar Sesión"} colorSet={"Primary"} type={"submit"}/>            
+            </div> 
 
-
-            <div className='itemsForm'>
-                {/* <ButtonAditional data={"¿Olvidaste tu contraseña?"}/> */}
-                <ButtonAditional data={"Registrarse"}/>
+            <div className='loginFormoptionsExtra'>
+                <ButtonAditional data={"¿Olvidaste tu contraseña?"}/>
+                <ButtonAditional data={"Registrarse"} colorSet={"White"}/> 
             </div>  
+            
         </form>  
 
     </main>

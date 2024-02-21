@@ -1,5 +1,5 @@
 //estado del usuario autorizado o no
-let usuarioAutenticado = false;
+let usuarioAutenticado = true;
 
 //Funciones Get y Set de la auntenticación
 const setAutenticado = (estado) => {
