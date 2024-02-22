@@ -7,7 +7,7 @@ import PrivateRoute from './PrivateRoute';
 import Loader from '../components/Loader';
 import ResponseList from '../components/ResponseList';
 
-const Register = lazy(()=> import('../screens/Register'));
+const RegisterPage = lazy(()=> import('../screens/registerGroup/RegisterPage'));
 const Login = lazy(()=> import('../screens/Login'));
 const DashboardUser = lazy(()=> import('../screens/DashboardUser'));
 const Depositar = lazy(()=> import('../screens/depositarGroup/Depositar'));
@@ -47,7 +47,7 @@ function RoutesList() {
         {/* //4 */}
         <Route path='/register' element={
             <React.Suspense fallback={<Loader/>}>
-                <Register/>
+                <RegisterPage/>
             </React.Suspense>
         }/>
 

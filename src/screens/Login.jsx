@@ -34,15 +34,15 @@ function Login() {
     }
 
 
-    const { addResponse } = useResponseStore();  
+    const { addResponse } = useResponseStore();
 
 
-  const loginFormEnviar = (data) =>{
-    console.log(data);
-    addResponse(`Datos validados, Bienvenido ${data.usernameLogin}!`,"success");
-    reset();
-  }
-
+    const loginFormEnviar = (data) =>{
+      console.log(data);
+      addResponse(`Datos validados, Bienvenido ${data.usernameLogin}!`,"success");
+      reset();
+    }
+    
 
   return (
     <>
