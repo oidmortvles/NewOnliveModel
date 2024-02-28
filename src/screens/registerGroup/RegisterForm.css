@@ -96,7 +96,7 @@
     justify-content: center;
     gap: 0.5rem;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
     transition: .3s ease-out;
 }
@@ -105,12 +105,7 @@
 .registerForm .registerSelectedPage{
     display: flex;
     width: 100%;
-
-    section{
-        opacity: 1;
-    }
-
-
+    
     .rTagTittle{
         opacity: 7;
     }

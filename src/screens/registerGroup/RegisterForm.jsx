@@ -7,43 +7,97 @@ import useResponseStore from '../../store/response';
 
 function RegisterForm() {
 
-  const {register, handleSubmit, formState:{errors}, reset} = useForm();
+  const {register, handleSubmit, formState:{errors}, reset, trigger, watch} = useForm();
 
     {/* VALIDADORES POR CAMPO */}
+    //view I
+    const registerEmail= {
+        required: {value:true, message:"El campo Email es requerido"},
+        maxLength:{value:30, message:"El campo debe tener menos de 30 caracteres"}, 
+        pattern:{value:/^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/, message:"Ingrese un correo valido"},
+    };
+
+    const registerUsername= {
+        required: {value:true, message:"El campo Username es requerido"},
+        maxLength:{value:30, message:"El campo debe tener menos de 30 caracteres"}, 
+        minLength:{value:6, message:"El campo debe tener al menos 6 caracteres"},
+    };
+
+    const registerPass1= {
+        required: {value:true, message:"El campo Contraseña es requerido"},
+        maxLength:{value:30, message:"El campo debe tener menos de 30 caracteres"}, 
+        minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
+    };
 
 
+    const equalsPasswords = () =>{
+        let pass1 = watch("registerPass1");
+        let pass2 = watch("registerPass2");
+        if (pass1===pass2){
+            return true
+        }else{
+            return "Las contraseñas no coinciden"
+        }
+    }
+
+    const registerPass2= {
+        required: {value:true, message:"Por favor, repita su Contraseña"},
+        maxLength:{value:30, message:"El campo debe tener menos de 30 caracteres"}, 
+        minLength:{value:8, message:"El campo debe tener al menos 8 caracteres"},
+        validate:equalsPasswords
+    }
 
 
+    //view I
+
+    //view II
+    //view II
+
+    //view III
+    //view III
+
+    //view IV
+    //view IV
 
     
-    /* CONTROLADOR DE PAGINAS */
+
+
+    /* CONTROLADOR DE PAGINAS 🡫*/
+    const page0 = useRef();
     const page1 = useRef();
     const page2 = useRef();
     const page3 = useRef();
-    const page4 = useRef();
 
     // Array con las referencias a cada Page
-    const pages=[page1,page2,page3,page4];
-    let page =0;
+    const pages=[page0,page1,page2,page3];
     
-    const next = () =>{      
-      page<= (pages.length -1)? (page++):(page=0);
-      let selectedPage =pages[page];
-      let prevSelectedPage = pages[page-1];
-      prevSelectedPage.current.classList.remove("registerSelectedPage");
-      selectedPage.current.classList.add("registerSelectedPage");
+    const next = async (numberPage) =>{   
+      //primero validamos los campos  
+      const validarViewI = await trigger(["registerEmail","registerUsername","registerPass1","registerPass2"]);      
+      
+        if(validarViewI){
+        //producimos los cambios  
+        let nextPage = numberPage +1;
+        let selectedPage =pages[nextPage];
+        let prevSelectedPage = pages[nextPage-1];
+        prevSelectedPage.current.classList.remove("registerSelectedPage");
+        selectedPage.current.classList.add("registerSelectedPage");
+        }
+      
     }
-                                        
-    const prev = () =>{      
-      page<= (pages.length -1)? (page--):(page=0);
-      let selectedPage =pages[page];
-      let prevSelectedPage = pages[page+1];
-      prevSelectedPage.current.classList.remove("registerSelectedPage");
-      selectedPage.current.classList.add("registerSelectedPage");
+
+    const prev = (numberPage) =>{      
+        let prevPage = numberPage -1;
+        let selectedPage =pages[prevPage];
+        let nextSelectedPage = pages[numberPage];
+        nextSelectedPage.current.classList.remove("registerSelectedPage");
+        selectedPage.current.classList.add("registerSelectedPage");
     }
-    /* CONTROLADOR DE PAGINAS */
+    /* CONTROLADOR DE PAGINAS 🡡 */
 
 
+
+    //ENVIAR & GESTIONAR FORM
     const { addResponse } = useResponseStore();    
     const registerFormEnviar = (data) =>{
       console.log(data);
@@ -55,12 +109,12 @@ function RegisterForm() {
     
         <form className='registerForm' onSubmit={handleSubmit(registerFormEnviar)}>
 
-            <div className='registerFirstSection registerSelectedPage' ref={page1}>
+            <div className='registerFirstSection registerSelectedPage' ref={page0}>
                 <section>
-                    <InputText id={"registerMail"} name={"registerEmail"} title={"Ingrese su Email"} register={register}/>
-                    <InputText id={"registerApodo"} name={"registerUsername"} title={"Cree un Nombre de Usuario"} register={register}/>
-                    <InputText type={"password"} id={"registerContra1"} name={"registerPass1"} title={"Ingrese su Contraseña"} register={register}/>
-                    <InputText type={"password"} id={"registerContra2"} name={"registerPass2"} title={"Repita su Contraseña"} register={register}/>
+                    <InputText id={"registerMail"} name={"registerEmail"} title={"Ingrese su Email"} register={register} validator={registerEmail} warnings={errors.registerEmail}/>
+                    <InputText id={"registerApodo"} name={"registerUsername"} title={"Cree un Nombre de Usuario"} register={register} validator={registerUsername} warnings={errors.registerUsername}/>
+                    <InputText type={"password"} id={"registerContra1"} name={"registerPass1"} title={"Ingrese su Contraseña"} register={register} validator={registerPass1} warnings={errors.registerPass1}/>
+                    <InputText type={"password"} id={"registerContra2"} name={"registerPass2"} title={"Repita su Contraseña"} register={register} validator={registerPass2} warnings={errors.registerPass2}/>
                 
                     <aside className='registerFormContainerMarker'>
                         <div className='RegisterFormItemMarker registerItemSelected'></div>
@@ -70,7 +124,7 @@ function RegisterForm() {
                     </aside>
                     
                     <div className="registerSectionButtons">                        
-                        <ButtonAditional data={"Siguiente"} fn={()=> next()}/>
+                        <ButtonAditional data={"Siguiente"} fn={()=> next(0)} />
                     </div>
                 
                 </section>
@@ -79,7 +133,7 @@ function RegisterForm() {
 
 
 
-            <div className="registerSecondSection" ref={page2}>
+            <div className="registerSecondSection" ref={page1}>
                 <section>
                     <InputText id={"registerNombre"} name={"registerName"} title={"Ingrese su Nombre"} register={register}/>
                     <InputText id={"registerApellido"} name={"registerSecondName"} title={"Ingrese su Apellido"} register={register}/>
@@ -111,8 +165,8 @@ function RegisterForm() {
                     </aside>
 
                     <div className="registerSectionButtons">
-                        <ButtonAditional data={"Anterior"} fn={()=> prev()} />
-                        <ButtonAditional data={"Siguiente"} fn={()=> next()}/>
+                        <ButtonAditional data={"Anterior"} fn={()=> prev(1)} />
+                        <ButtonAditional data={"Siguiente"} fn={()=> next(1)}/>
                     </div>
 
                 </section>
@@ -121,7 +175,7 @@ function RegisterForm() {
 
 
 
-            <div className="registerThirdSection" ref={page3}>
+            <div className="registerThirdSection" ref={page2}>
                 <section>
                     <div className='inputDateContainer'>
                         <label htmlFor="registerCity">Ciudad de Residencia</label>
@@ -141,8 +195,8 @@ function RegisterForm() {
 
 
                   <div className="registerSectionButtons">
-                      <ButtonAditional data={"Anterior"} fn={()=> prev()} />
-                      <ButtonAditional data={"Siguiente"} fn={()=> next()}/>
+                      <ButtonAditional data={"Anterior"} fn={()=> prev(2)} />
+                      <ButtonAditional data={"Siguiente"} fn={()=> next(2)}/>
                   </div>
                 
                 </section>
@@ -151,10 +205,10 @@ function RegisterForm() {
 
 
 
-            <div className="registerFourthSection" ref={page4}>  
+            <div className="registerFourthSection" ref={page3}>  
                 <section>
 
-                    <ButtonAditional data={"Registrarme en OnLive"} colorSet={"Primary"}/>
+                    <ButtonAditional data={"Registrarme en OnLive"} colorSet={"Primary"} type={"submit"}/>
 
 
 
@@ -166,7 +220,7 @@ function RegisterForm() {
                     </aside>
 
                     <div className="registerSectionButtons">
-                      <ButtonAditional data={"Anterior"} fn={()=> prev()} />
+                      <ButtonAditional data={"Anterior"} fn={()=> prev(3)} />
                     </div>
                 </section>  
                <p className="rTagTittle">Términos y condiciones</p>
